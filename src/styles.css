@@ -1,0 +1,235 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * ExpoLearn design system.
+ * Vert éducatif clair, blancs généreux, coins arrondis, ombres douces.
+ * Toutes les couleurs sont en oklch et exposées comme tokens sémantiques.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-soft: 0 1px 2px oklch(0.45 0.09 150 / 0.06), 0 8px 24px oklch(0.45 0.09 150 / 0.07);
+  --shadow-card: 0 1px 2px oklch(0.45 0.09 150 / 0.05), 0 12px 32px oklch(0.45 0.09 150 / 0.06);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* #FFFFFF */
+  --background: oklch(1 0 0);
+  /* #17251C */
+  --foreground: oklch(0.219 0.019 156.5);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.219 0.019 156.5);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.219 0.019 156.5);
+
+  /* #65C466 */
+  --primary: oklch(0.749 0.164 146.3);
+  --primary-foreground: oklch(1 0 0);
+  /* #247A45 */
+  --primary-dark: oklch(0.483 0.119 154.6);
+
+  /* #EAF8EC */
+  --secondary: oklch(0.966 0.023 149.6);
+  --secondary-foreground: oklch(0.483 0.119 154.6);
+
+  /* #F5FCF6 */
+  --muted: oklch(0.985 0.012 149.6);
+  /* #66736A */
+  --muted-foreground: oklch(0.541 0.016 156.2);
+
+  --accent: oklch(0.966 0.023 149.6);
+  --accent-foreground: oklch(0.483 0.119 154.6);
+
+  /* touche jaune / orange, usage ponctuel */
+  --highlight: oklch(0.83 0.155 79);
+  --highlight-foreground: oklch(0.31 0.06 60);
+
+  --surface: oklch(0.985 0.012 149.6);
+  --surface-strong: oklch(0.966 0.023 149.6);
+
+  --destructive: oklch(0.577 0.212 22.5);
+  --destructive-foreground: oklch(1 0 0);
+
+  --border: oklch(0.933 0.019 149.6);
+  --input: oklch(0.913 0.021 149.6);
+  --ring: oklch(0.749 0.164 146.3);
+
+  --chart-1: oklch(0.749 0.164 146.3);
+  --chart-2: oklch(0.483 0.119 154.6);
+  --chart-3: oklch(0.83 0.155 79);
+  --chart-4: oklch(0.966 0.023 149.6);
+  --chart-5: oklch(0.541 0.016 156.2);
+
+  --sidebar: oklch(0.985 0.012 149.6);
+  --sidebar-foreground: oklch(0.219 0.019 156.5);
+  --sidebar-primary: oklch(0.483 0.119 154.6);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.966 0.023 149.6);
+  --sidebar-accent-foreground: oklch(0.483 0.119 154.6);
+  --sidebar-border: oklch(0.933 0.019 149.6);
+  --sidebar-ring: oklch(0.749 0.164 146.3);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 76rem;
+  padding-inline: 1.25rem;
+}
+
+@utility text-balance-p {
+  text-wrap: pretty;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-rise {
+  animation: rise-in 0.5s ease-out both;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-pop {
+  animation: pop-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    transform: scale(0.85);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.12;
+  }
+}
+
+@utility animate-pulse-glow {
+  animation: pulse-glow 2.6s ease-in-out infinite;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@utility animate-float {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
