@@ -13,9 +13,10 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
 import { Route as CommentCaMarcheRouteImport } from './routes/comment-ca-marche'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as DevenirRepetiteurRouteImport } from './routes/devenir-repetiteur'
 import { Route as FaqRouteImport } from './routes/faq'
-import { Route as TrouverUnRepetiteurRouteImport } from './routes/trouver-un-repetiteur'
+import { Route as InscriptionRouteImport } from './routes/inscription'
+import { Route as ServicesIndexRouteImport } from './routes/services/index'
+import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -37,19 +38,24 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DevenirRepetiteurRoute = DevenirRepetiteurRouteImport.update({
-  id: '/devenir-repetiteur',
-  path: '/devenir-repetiteur',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TrouverUnRepetiteurRoute = TrouverUnRepetiteurRouteImport.update({
-  id: '/trouver-un-repetiteur',
-  path: '/trouver-un-repetiteur',
+const InscriptionRoute = InscriptionRouteImport.update({
+  id: '/inscription',
+  path: '/inscription',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesSlugRoute = ServicesSlugRouteImport.update({
+  id: '/services/$slug',
+  path: '/services/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -58,18 +64,20 @@ export interface FileRoutesByFullPath {
   '/a-propos': typeof AProposRoute
   '/comment-ca-marche': typeof CommentCaMarcheRoute
   '/contact': typeof ContactRoute
-  '/devenir-repetiteur': typeof DevenirRepetiteurRoute
   '/faq': typeof FaqRoute
-  '/trouver-un-repetiteur': typeof TrouverUnRepetiteurRoute
+  '/inscription': typeof InscriptionRoute
+  '/services/$slug': typeof ServicesSlugRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
   '/comment-ca-marche': typeof CommentCaMarcheRoute
   '/contact': typeof ContactRoute
-  '/devenir-repetiteur': typeof DevenirRepetiteurRoute
   '/faq': typeof FaqRoute
-  '/trouver-un-repetiteur': typeof TrouverUnRepetiteurRoute
+  '/inscription': typeof InscriptionRoute
+  '/services/$slug': typeof ServicesSlugRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -77,9 +85,10 @@ export interface FileRoutesById {
   '/a-propos': typeof AProposRoute
   '/comment-ca-marche': typeof CommentCaMarcheRoute
   '/contact': typeof ContactRoute
-  '/devenir-repetiteur': typeof DevenirRepetiteurRoute
   '/faq': typeof FaqRoute
-  '/trouver-un-repetiteur': typeof TrouverUnRepetiteurRoute
+  '/inscription': typeof InscriptionRoute
+  '/services/$slug': typeof ServicesSlugRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -88,27 +97,30 @@ export interface FileRouteTypes {
     | '/a-propos'
     | '/comment-ca-marche'
     | '/contact'
-    | '/devenir-repetiteur'
     | '/faq'
-    | '/trouver-un-repetiteur'
+    | '/inscription'
+    | '/services/$slug'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/a-propos'
     | '/comment-ca-marche'
     | '/contact'
-    | '/devenir-repetiteur'
     | '/faq'
-    | '/trouver-un-repetiteur'
+    | '/inscription'
+    | '/services/$slug'
+    | '/services'
   id:
     | '__root__'
     | '/'
     | '/a-propos'
     | '/comment-ca-marche'
     | '/contact'
-    | '/devenir-repetiteur'
     | '/faq'
-    | '/trouver-un-repetiteur'
+    | '/inscription'
+    | '/services/$slug'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -116,9 +128,10 @@ export interface RootRouteChildren {
   AProposRoute: typeof AProposRoute
   CommentCaMarcheRoute: typeof CommentCaMarcheRoute
   ContactRoute: typeof ContactRoute
-  DevenirRepetiteurRoute: typeof DevenirRepetiteurRoute
   FaqRoute: typeof FaqRoute
-  TrouverUnRepetiteurRoute: typeof TrouverUnRepetiteurRoute
+  InscriptionRoute: typeof InscriptionRoute
+  ServicesSlugRoute: typeof ServicesSlugRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -151,13 +164,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/devenir-repetiteur': {
-      id: '/devenir-repetiteur'
-      path: '/devenir-repetiteur'
-      fullPath: '/devenir-repetiteur'
-      preLoaderRoute: typeof DevenirRepetiteurRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/faq': {
       id: '/faq'
       path: '/faq'
@@ -165,11 +171,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/trouver-un-repetiteur': {
-      id: '/trouver-un-repetiteur'
-      path: '/trouver-un-repetiteur'
-      fullPath: '/trouver-un-repetiteur'
-      preLoaderRoute: typeof TrouverUnRepetiteurRouteImport
+    '/inscription': {
+      id: '/inscription'
+      path: '/inscription'
+      fullPath: '/inscription'
+      preLoaderRoute: typeof InscriptionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/': {
+      id: '/services/'
+      path: '/services'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services/$slug': {
+      id: '/services/$slug'
+      path: '/services/$slug'
+      fullPath: '/services/$slug'
+      preLoaderRoute: typeof ServicesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -180,9 +200,10 @@ const rootRouteChildren: RootRouteChildren = {
   AProposRoute: AProposRoute,
   CommentCaMarcheRoute: CommentCaMarcheRoute,
   ContactRoute: ContactRoute,
-  DevenirRepetiteurRoute: DevenirRepetiteurRoute,
   FaqRoute: FaqRoute,
-  TrouverUnRepetiteurRoute: TrouverUnRepetiteurRoute,
+  InscriptionRoute: InscriptionRoute,
+  ServicesSlugRoute: ServicesSlugRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

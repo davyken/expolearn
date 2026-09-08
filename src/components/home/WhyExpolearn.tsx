@@ -1,13 +1,19 @@
-import { BarChart3, Home, ShieldCheck, Target, type LucideIcon } from "lucide-react";
+import {
+  BarChart3,
+  Globe2,
+  ShieldCheck,
+  Target,
+  type LucideIcon,
+} from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 import { WHY_ITEMS } from "@/constants/content";
 
 const ICONS: Record<string, LucideIcon> = {
   shield: ShieldCheck,
-  home: Home,
   target: Target,
   chart: BarChart3,
+  globe: Globe2,
 };
 
 export function WhyExpolearn() {
@@ -15,8 +21,8 @@ export function WhyExpolearn() {
     <Section tone="muted" id="pourquoi">
       <SectionHeading
         eyebrow="Pourquoi ExpoLearn"
-        title="Pourquoi les familles nous font confiance"
-        description="Nous ne nous contentons pas de transmettre un contact. Nous sélectionnons, nous mettons en relation et nous accompagnons."
+        title="Pourquoi les familles et les apprenants nous font confiance"
+        description="Un accompagnement personnalisé, des formateurs expérimentés et un suivi régulier de la progression, quel que soit le service choisi."
       />
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -33,7 +39,9 @@ export function WhyExpolearn() {
                   <Icon aria-hidden="true" className="size-5" />
                 </span>
                 <h3 className="mt-5 text-base font-bold">{item.title}</h3>
-                <p className="text-balance-p mt-2.5 text-sm text-muted-foreground">{item.text}</p>
+                <p className="text-balance-p mt-2.5 text-sm text-muted-foreground">
+                  {item.text}
+                </p>
               </article>
             </Reveal>
           );

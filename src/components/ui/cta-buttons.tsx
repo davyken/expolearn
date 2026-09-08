@@ -17,8 +17,8 @@ export function CtaButtons({
   return (
     <div className={cn("flex flex-col gap-3 sm:flex-row", className)}>
       <Button asChild size={size}>
-        <Link to="/trouver-un-repetiteur">
-          Trouver un répétiteur
+        <Link to="/inscription">
+          S'inscrire
           <ArrowRight aria-hidden="true" />
         </Link>
       </Button>
@@ -32,7 +32,7 @@ export function CtaButtons({
             : undefined
         }
       >
-        <Link to="/devenir-repetiteur">Devenir répétiteur</Link>
+        <Link to="/contact">Nous contacter</Link>
       </Button>
     </div>
   );

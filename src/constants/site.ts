@@ -1,24 +1,33 @@
 export const SITE = {
   name: "ExpoLearn",
-  tagline:
-    "Une solution de soutien scolaire à domicile qui sélectionne, met en relation et accompagne les familles et les répétiteurs.",
-  // Données de contact fournies comme placeholders : à confirmer avant publication.
-  phone: "+237 6 94 75 83 09",
-  phoneHref: "tel:+237694758309",
-  whatsapp: "+237 6 94 75 83 09",
-  whatsappHref: "https://wa.me/237694758309",
-  email: "contact@expolearn.cm",
-  emailHref: "mailto:contact@expolearn.cm",
-  cityPlaceholder: "Yaoundé et Douala (zones à confirmer)",
+  legalName: "EXPOLEARN SARL",
+  meaning: "Exponential Learning",
+  tagline: "Apprendre. Progresser. Réussir.",
+  positioning:
+    "ExpoLearn accompagne élèves, étudiants et jeunes professionnels avec des formations en soutien scolaire, préparation aux concours, langues (anglais, allemand) et accompagnement au visa étudiant.",
+  founder: "Keyantio Jokeng Thierry Gaëtan",
+  founderRole: "Fondateur & Directeur Général",
+  phone: "+237 691 826 725",
+  phoneHref: "tel:+237691826725",
+  phoneSecondary: "+237 670 106 016",
+  phoneSecondaryHref: "tel:+237670106016",
+  whatsapp: "+237 691 826 725",
+  whatsappHref: "https://wa.me/237691826725",
+  email: "expolearn04@gmail.com",
+  emailHref: "mailto:expolearn04@gmail.com",
+  address: "En face du Lycée de Nkolmesseng, Yaoundé, Cameroun",
+  city: "Yaoundé",
+  legalMention:
+    "EXPOLEARN SARL — société à responsabilité limitée de droit camerounais (Acte uniforme OHADA), capital de 1 000 000 FCFA, immatriculation au RCCM en cours.",
 } as const;
 
 export const NAV_LINKS = [
   { label: "Accueil", to: "/" },
+  { label: "Nos services", to: "/services" },
   { label: "Comment ça marche", to: "/comment-ca-marche" },
-  { label: "Pour les parents", to: "/trouver-un-repetiteur" },
-  { label: "Pour les répétiteurs", to: "/devenir-repetiteur" },
   { label: "À propos", to: "/a-propos" },
   { label: "FAQ", to: "/faq" },
+  { label: "Contact", to: "/contact" },
 ] as const;
 
 export const SUBJECTS = [
@@ -53,29 +62,19 @@ export const FREQUENCIES = [
   "À définir avec ExpoLearn",
 ] as const;
 
-export const BUDGETS = [
-  "Moins de 20 000 FCFA / mois",
-  "20 000 – 40 000 FCFA / mois",
-  "40 000 – 70 000 FCFA / mois",
-  "Plus de 70 000 FCFA / mois",
-  "À définir avec ExpoLearn",
+export const EXAM_TYPES = [
+  "Concours d'entrée aux grandes écoles et établissements supérieurs",
+  "Examens officiels (BEPC, Probatoire, Baccalauréat...)",
+  "Certification linguistique (TCF, TOEFL, IELTS...)",
+  "Autre concours ou examen",
 ] as const;
 
-export const STUDY_LEVELS = [
-  "Baccalauréat",
-  "Licence en cours",
-  "Licence obtenue",
-  "Master en cours",
-  "Master obtenu",
-  "Enseignant en poste",
-  "Autre",
-] as const;
-
-export const AVAILABILITY_SLOTS = [
-  "Lundi – vendredi, après-midi",
-  "Lundi – vendredi, soirée",
-  "Samedi, matin",
-  "Samedi, après-midi",
-  "Dimanche",
-  "Vacances scolaires",
+export const DESTINATION_COUNTRIES = [
+  "Allemagne",
+  "France",
+  "Canada",
+  "États-Unis",
+  "Royaume-Uni",
+  "Autre pays",
+  "Je ne sais pas encore",
 ] as const;

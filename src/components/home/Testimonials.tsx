@@ -1,16 +1,17 @@
 import { Quote } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
-import { SAMPLE_TESTIMONIALS } from "@/constants/content";
+import { SAMPLE_TESTIMONIALS, TESTIMONIALS_NOTE } from "@/constants/content";
 
 export function Testimonials() {
   return (
     <Section tone="muted">
       <SectionHeading
         eyebrow="Témoignages"
-        title="Ce que disent les familles et les répétiteurs"
-        description="Des retours de parents et de répétiteurs accompagnés par ExpoLearn."
+        title="Ce que disent les familles et les apprenants"
+        description="Des retours de personnes accompagnées par ExpoLearn, selon le service suivi."
       />
+      <p className="mt-2 text-xs text-muted-foreground">{TESTIMONIALS_NOTE}</p>
 
       <ul className="mt-10 grid gap-5 lg:grid-cols-3">
         {SAMPLE_TESTIMONIALS.map((item, index) => (

@@ -8,9 +8,9 @@ export function SubjectsLevels() {
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <SectionHeading
-            eyebrow="Matières"
+            eyebrow="Soutien scolaire"
             title="Les matières couvertes"
-            description="Si la matière recherchée n'apparaît pas, indiquez-la dans votre demande : nous cherchons un répétiteur adapté."
+            description="Si la matière recherchée n'apparaît pas, indiquez-la dans votre inscription : nous adaptons l'accompagnement."
           />
           <ul className="mt-8 flex flex-wrap gap-2.5">
             {SUBJECTS.map((subject, index) => (

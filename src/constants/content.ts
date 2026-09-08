@@ -1,150 +1,119 @@
 export const WHY_ITEMS = [
   {
-    icon: "shield",
-    title: "Des répétiteurs sélectionnés",
-    text: "Chaque candidature est examinée : parcours scolaire, expérience d'encadrement, matières réellement maîtrisées et entretien avant toute mise en relation.",
-  },
-  {
-    icon: "home",
-    title: "Des séances à domicile",
-    text: "Le répétiteur se déplace chez vous, dans votre quartier, à des horaires qui s'adaptent à la vie de la famille et au rythme de l'élève.",
-  },
-  {
     icon: "target",
     title: "Un accompagnement personnalisé",
-    text: "Nous partons du niveau réel de l'élève et de l'objectif que vous fixez : rattraper un retard, consolider les bases ou préparer un examen.",
+    text: "Nous partons du niveau réel de l'apprenant et de l'objectif fixé : rattraper un retard, atteindre un niveau de langue ou préparer un concours.",
+  },
+  {
+    icon: "shield",
+    title: "Des formateurs expérimentés",
+    text: "Des enseignants et formateurs pédagogues, à l'écoute, sélectionnés pour leur maîtrise réelle des matières et des langues enseignées.",
   },
   {
     icon: "chart",
-    title: "Un suivi dans le temps",
-    text: "Nous restons joignables après la mise en relation pour faire un point régulier, ajuster le rythme ou changer de répétiteur si nécessaire.",
+    title: "Des progrès mesurables",
+    text: "Des évaluations régulières pour suivre l'évolution de chaque apprenant et ajuster l'accompagnement tout au long du parcours.",
+  },
+  {
+    icon: "globe",
+    title: "Présentiel et en ligne",
+    text: "Des cours au siège d'ExpoLearn à Yaoundé, à domicile ou en ligne, selon le service et vos disponibilités.",
   },
 ] as const;
 
-export const HOW_IT_WORKS_PARENT = [
+export const HOW_IT_WORKS_STEPS = [
   {
     step: "01",
-    title: "Vous décrivez votre besoin",
-    text: "Niveau de l'élève, matières concernées, objectif, fréquence souhaitée, quartier et disponibilités. Le formulaire prend quelques minutes.",
+    title: "Vous nous contactez",
+    text: "Par téléphone, WhatsApp ou le formulaire d'inscription, vous nous indiquez le service qui vous intéresse et votre objectif.",
   },
   {
     step: "02",
-    title: "Nous sélectionnons un répétiteur",
-    text: "Nous cherchons dans notre réseau un répétiteur dont le profil, les matières et la zone d'intervention correspondent à votre demande.",
+    title: "Nous évaluons votre besoin",
+    text: "Niveau actuel, objectif, disponibilités : nous échangeons avec vous pour cerner précisément votre situation.",
   },
   {
     step: "03",
-    title: "Nous organisons la mise en relation",
-    text: "Vous échangez avec le répétiteur proposé, vous validez les horaires et les conditions, puis la première séance est planifiée.",
+    title: "Nous vous orientons vers le bon programme",
+    text: "Groupe ou individuel, présentiel ou en ligne, date de rentrée : nous vous proposons le format adapté à votre objectif.",
   },
   {
     step: "04",
-    title: "Les séances commencent, le suivi continue",
-    text: "Les répétitions se déroulent à domicile. ExpoLearn reste votre point de contact pour le suivi, les ajustements et le paiement.",
+    title: "Les cours commencent, le suivi continue",
+    text: "Vous démarrez votre programme avec ExpoLearn. Des évaluations régulières permettent de suivre la progression et d'ajuster l'accompagnement.",
   },
-] as const;
-
-export const HOW_IT_WORKS_TUTOR = [
-  {
-    step: "01",
-    title: "Vous déposez votre candidature",
-    text: "Formation, matières et niveaux enseignés, expérience, zone d'intervention et disponibilités. Le CV est optionnel.",
-  },
-  {
-    step: "02",
-    title: "Nous étudions votre profil",
-    text: "Nous vérifions la cohérence de votre parcours et échangeons avec vous par téléphone ou en entretien.",
-  },
-  {
-    step: "03",
-    title: "Vous recevez des propositions de mission",
-    text: "Nous vous proposons des familles proches de votre zone, correspondant à vos matières et à vos créneaux.",
-  },
-  {
-    step: "04",
-    title: "Vous encadrez et êtes accompagné",
-    text: "Vous assurez les séances à domicile. ExpoLearn gère la relation administrative et reste disponible en cas de difficulté.",
-  },
-] as const;
-
-export const PARENT_BENEFITS = [
-  "Un interlocuteur unique du premier contact au suivi des séances",
-  "Un répétiteur choisi selon le niveau et le caractère de votre enfant",
-  "Des horaires fixés avec vous, sans déplacement pour l'élève",
-  "La possibilité de demander un changement de répétiteur",
-] as const;
-
-export const TUTOR_BENEFITS = [
-  "Des missions proches de votre quartier, sans prospection",
-  "Des familles dont le besoin est déjà clarifié en amont",
-  "Un cadre clair : horaires, matières, objectif et rémunération",
-  "Un accompagnement d'ExpoLearn en cas de difficulté avec une famille",
 ] as const;
 
 export const VALUES = [
   {
     title: "Excellence",
-    text: "Nous exigeons de nos répétiteurs une maîtrise réelle des matières et une capacité à expliquer simplement.",
+    text: "Nous exigeons de nos formateurs une maîtrise réelle de leur matière et une capacité à l'expliquer simplement.",
   },
   {
     title: "Confiance",
-    text: "Nous ne mettons en relation qu'après avoir examiné un profil, parce que nous parlons ici de la scolarité d'un enfant.",
+    text: "Nous accompagnons des parcours scolaires, académiques et de vie : chaque dossier est traité avec sérieux et discrétion.",
   },
   {
     title: "Proximité",
-    text: "Nous travaillons quartier par quartier, avec des personnes qui connaissent le terrain et le système scolaire camerounais.",
+    text: "Basés à Yaoundé, nous connaissons le système scolaire camerounais et les réalités des familles et des étudiants que nous accompagnons.",
   },
   {
     title: "Réussite",
-    text: "Notre objectif n'est pas le nombre de séances, mais la progression visible de l'élève sur son année scolaire.",
+    text: "Notre objectif n'est pas le nombre de séances ou de cours suivis, mais la progression réelle et durable de l'apprenant.",
   },
 ] as const;
 
 export const SAMPLE_TESTIMONIALS = [
   {
     quote:
-      "Ma fille avait décroché en mathématiques en classe de 3e. Le répétiteur a repris les bases avec elle, séance après séance, et elle a retrouvé confiance.",
+      "Mon fils avait décroché en mathématiques en classe de 3e. Les séances à domicile lui ont permis de reprendre les bases et de retrouver confiance avant le Brevet.",
     author: "Un parent d'élève",
   },
   {
     quote:
-      "Ce que j'ai apprécié, c'est d'avoir eu quelqu'un à appeler quand nous avons voulu changer les horaires. La demande a été traitée sans discussion.",
-    author: "Un parent d'élève",
+      "J'ai suivi les cours d'anglais en vue d'un IELTS. Le rythme des séances et le suivi du formateur m'ont vraiment aidé à progresser en quelques mois.",
+    author: "Un apprenant en anglais",
   },
   {
     quote:
-      "Je suis étudiant en licence et j'encadre deux élèves du quartier. Les missions me sont proposées avec le besoin déjà clair, cela change tout.",
-    author: "Un répétiteur ExpoLearn",
+      "L'accompagnement pour mon dossier de visa étudiant a rendu les démarches beaucoup plus claires. J'ai su exactement quelles pièces préparer, étape par étape.",
+    author: "Un candidat au départ à l'étranger",
   },
 ] as const;
 
+export const TESTIMONIALS_NOTE = "Exemples de retours à titre illustratif.";
+
 export const FAQ_ITEMS = [
   {
-    q: "Comment les répétiteurs sont-ils sélectionnés ?",
-    a: "Chaque candidature est examinée individuellement : niveau d'études, matières réellement maîtrisées, expérience d'encadrement et zone d'intervention. Nous échangeons ensuite avec le candidat avant toute proposition de mission. Un profil qui ne correspond pas à la demande d'une famille ne lui est pas présenté.",
+    q: "Quels services propose ExpoLearn ?",
+    a: "ExpoLearn propose cinq services : le soutien scolaire (en groupe ou à domicile), la préparation aux concours et examens, les cours d'anglais, les cours d'allemand et l'accompagnement au visa étudiant et à l'immigration. Chaque service a sa propre page avec le détail du format et des niveaux couverts.",
   },
   {
-    q: "Combien coûtent les répétitions ?",
-    a: "Le tarif dépend du niveau de l'élève, des matières, du nombre de séances par semaine et du quartier. Nous ne communiquons pas de montant fixe avant d'avoir étudié votre demande : vous recevez une proposition claire avant tout engagement, et ExpoLearn perçoit une commission sur les séances réalisées.",
+    q: "Comment se déroulent les cours de langues (anglais, allemand) ?",
+    a: "Les cours d'anglais et d'allemand sont proposés en présentiel, au siège d'ExpoLearn à Yaoundé, et en ligne. L'anglais est ouvert du niveau débutant à avancé avec une préparation possible aux certifications IELTS, TOEFL, TOEIC, TCF et TEF. L'allemand suit une progression structurée du niveau A1 au niveau C1.",
   },
   {
-    q: "Quelles zones sont couvertes ?",
-    a: `Nous démarrons sur ${"les grandes villes du Cameroun"} et nous étendons progressivement quartier par quartier. Les zones exactes couvertes sont à confirmer : indiquez votre ville et votre quartier dans le formulaire, nous vous répondons sur la faisabilité.`,
+    q: "Le soutien scolaire se fait-il en groupe ou à domicile ?",
+    a: "Les deux formats existent : des cours organisés en groupe au siège d'ExpoLearn, et un accompagnement individuel directement au domicile de l'élève. Toutes les matières sont couvertes, du primaire à la terminale.",
   },
   {
-    q: "Comment se passe le paiement ?",
-    a: "Le paiement se fait par période convenue avec ExpoLearn, une fois les séances planifiées. Les moyens de paiement disponibles vous sont précisés lors de la mise en relation. Aucun paiement n'est demandé pour déposer une demande.",
+    q: "Combien coûtent les formations ?",
+    a: "Le tarif dépend du service, du format (groupe, individuel, en ligne) et de la fréquence choisie. À titre indicatif, les cours d'anglais sont à 20 000 FCFA par mois. Pour le soutien scolaire, la préparation aux concours et l'accompagnement au visa étudiant, un devis est établi après évaluation de votre besoin.",
   },
   {
-    q: "Peut-on changer de répétiteur ?",
-    a: "Oui. Si le courant ne passe pas ou si la méthode ne convient pas à l'élève, vous nous le signalez et nous cherchons un autre profil. Nous préférons un changement assumé à des séances qui n'avancent pas.",
+    q: "Où se trouve ExpoLearn ?",
+    a: "Notre siège est situé à Yaoundé, en face du Lycée de Nkolmesseng. Les cours en ligne sont accessibles depuis n'importe quelle ville, et le soutien scolaire à domicile s'organise selon votre quartier.",
   },
   {
-    q: "Comment devenir répétiteur chez ExpoLearn ?",
-    a: "Vous remplissez le formulaire de candidature en indiquant votre formation, vos matières, vos niveaux, votre expérience, vos disponibilités et votre zone d'intervention. Nous revenons vers vous après examen du dossier, puis nous vous proposons des missions correspondant à votre profil.",
+    q: "Comment s'inscrire à un service ExpoLearn ?",
+    a: "Vous pouvez remplir le formulaire d'inscription en ligne en indiquant le service souhaité et vos coordonnées, ou nous contacter directement par téléphone ou WhatsApp. Nous revenons vers vous pour préciser votre besoin avant de confirmer votre inscription.",
   },
   {
-    q: "Faut-il un engagement de durée ?",
-    a: "Non. Vous définissez avec nous une fréquence et une période, et vous pouvez faire évoluer le rythme au fil de l'année scolaire, par exemple pour renforcer la préparation d'un examen.",
+    q: "En quoi consiste l'accompagnement au visa étudiant ?",
+    a: "Nous faisons le point sur votre projet d'études à l'étranger et le pays visé, nous vous aidons à préparer votre dossier et nous vous conseillons sur les démarches d'immigration liées à vos études. L'accompagnement est individuel et suit votre dossier jusqu'à la finalisation des démarches.",
+  },
+  {
+    q: "Peut-on changer de formateur ou de rythme en cours de route ?",
+    a: "Oui. Si le rythme ou la méthode ne convient pas, signalez-le-nous : nous ajustons l'accompagnement ou proposons un autre formateur. Vous pouvez aussi faire évoluer la fréquence des séances au fil de l'année, par exemple pour renforcer la préparation d'un examen.",
   },
 ] as const;

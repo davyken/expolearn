@@ -3,12 +3,14 @@ import { Section, SectionHeading } from "@/components/ui/section";
 import { PageHero } from "@/components/ui/page-hero";
 import { CtaButtons } from "@/components/ui/cta-buttons";
 import { Reveal } from "@/components/ui/reveal";
-import { HOW_IT_WORKS_PARENT, HOW_IT_WORKS_TUTOR } from "@/constants/content";
+import { ServiceCard } from "@/components/services/ServiceCard";
+import { HOW_IT_WORKS_STEPS } from "@/constants/content";
+import { SERVICES } from "@/constants/services";
 import { FinalCta } from "@/components/home/FinalCta";
 
 const TITLE = "Comment ça marche — ExpoLearn";
 const DESCRIPTION =
-  "Le parcours ExpoLearn étape par étape, pour les parents comme pour les répétiteurs : demande, sélection du profil, mise en relation et suivi des séances.";
+  "Le parcours ExpoLearn étape par étape : premier contact, évaluation du besoin, orientation vers le bon programme et suivi des cours.";
 
 export const Route = createFileRoute("/comment-ca-marche")({
   head: () => ({
@@ -22,47 +24,58 @@ export const Route = createFileRoute("/comment-ca-marche")({
   component: HowPage,
 });
 
-function Steps({ items }: { items: readonly { step: string; title: string; text: string }[] }) {
-  return (
-    <ol className="mt-10 space-y-4">
-      {items.map((item, index) => (
-        <Reveal
-          key={item.step}
-          as="li"
-          delay={index * 80}
-          direction={index % 2 === 0 ? "left" : "right"}
-          className="flex gap-4 rounded-3xl border border-border bg-card p-6"
-        >
-          <span className="font-display text-lg font-bold text-primary-dark">{item.step}</span>
-          <div>
-            <h3 className="text-base font-bold">{item.title}</h3>
-            <p className="text-balance-p mt-2 text-sm text-muted-foreground">{item.text}</p>
-          </div>
-        </Reveal>
-      ))}
-    </ol>
-  );
-}
-
 function HowPage() {
   return (
     <>
       <PageHero
         eyebrow="Comment ça marche"
-        title="De votre première demande à la progression de l'élève"
-        description="Le même principe pour tout le monde : un besoin clarifié, un profil vérifié, un cadre défini avant la première séance."
+        title="De votre première demande au début des cours"
+        description="Le même principe pour tous les services : un besoin clarifié, un programme adapté, un suivi dans la durée."
       >
         <CtaButtons className="mt-8 justify-center" tone="dark" />
       </PageHero>
 
       <Section>
-        <SectionHeading eyebrow="Parents" title="Le parcours côté famille" />
-        <Steps items={HOW_IT_WORKS_PARENT} />
+        <SectionHeading eyebrow="Votre parcours" title="Quatre étapes" />
+        <ol className="mt-10 space-y-4">
+          {HOW_IT_WORKS_STEPS.map((item, index) => (
+            <Reveal
+              key={item.step}
+              as="li"
+              delay={index * 80}
+              direction={index % 2 === 0 ? "left" : "right"}
+              className="flex gap-4 rounded-3xl border border-border bg-card p-6"
+            >
+              <span className="font-display text-lg font-bold text-primary-dark">
+                {item.step}
+              </span>
+              <div>
+                <h3 className="text-base font-bold">{item.title}</h3>
+                <p className="text-balance-p mt-2 text-sm text-muted-foreground">
+                  {item.text}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </ol>
       </Section>
 
       <Section tone="muted">
-        <SectionHeading eyebrow="Répétiteurs" title="Le parcours côté répétiteur" />
-        <Steps items={HOW_IT_WORKS_TUTOR} />
+        <SectionHeading
+          eyebrow="Quel service pour vous ?"
+          title="Choisissez votre point de départ"
+        />
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((service, index) => (
+            <Reveal
+              key={service.slug}
+              delay={index * 80}
+              direction={index % 2 === 0 ? "left" : "right"}
+            >
+              <ServiceCard service={service} />
+            </Reveal>
+          ))}
+        </div>
       </Section>
 
       <FinalCta />

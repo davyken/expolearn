@@ -13,7 +13,7 @@ import { FinalCta } from "@/components/home/FinalCta";
 
 const TITLE = "FAQ — Questions fréquentes sur ExpoLearn";
 const DESCRIPTION =
-  "Sélection des répétiteurs, tarifs, zones couvertes, paiement, changement de répétiteur : les réponses aux questions les plus fréquentes des familles et des répétiteurs.";
+  "Services, tarifs, formats de cours, rentrées, paiement : les réponses aux questions les plus fréquentes sur ExpoLearn.";
 
 export const Route = createFileRoute("/faq")({
   head: () => ({
@@ -52,7 +52,11 @@ function FaqPage() {
       <Section>
         <Accordion type="single" collapsible className="max-w-3xl">
           {FAQ_ITEMS.map((item, index) => (
-            <Reveal key={item.q} delay={index * 60} direction={index % 2 === 0 ? "left" : "right"}>
+            <Reveal
+              key={item.q}
+              delay={index * 60}
+              direction={index % 2 === 0 ? "left" : "right"}
+            >
               <AccordionItem value={`item-${index}`}>
                 <AccordionTrigger className="text-left text-base font-semibold">
                   {item.q}

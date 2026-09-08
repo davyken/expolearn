@@ -45,17 +45,25 @@ export function Header() {
               <GraduationCap aria-hidden="true" className="size-5" />
             </span>
           </span>
-          <span className="font-display text-lg font-bold tracking-tight">ExpoLearn</span>
+          <span className="font-display text-lg font-bold tracking-tight">
+            ExpoLearn
+          </span>
         </Link>
 
-        <nav aria-label="Navigation principale" className="hidden items-center gap-1 lg:flex">
+        <nav
+          aria-label="Navigation principale"
+          className="hidden items-center gap-1 lg:flex"
+        >
           {LINKS.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               activeOptions={{ exact: true }}
               className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-secondary-foreground"
-              activeProps={{ className: "bg-secondary text-secondary-foreground font-semibold" }}
+              activeProps={{
+                className:
+                  "bg-secondary text-secondary-foreground font-semibold",
+              }}
             >
               {link.label}
             </Link>
@@ -64,10 +72,10 @@ export function Header() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <Button asChild variant="outline" size="sm">
-            <Link to="/devenir-repetiteur">Devenir répétiteur</Link>
+            <Link to="/contact">Nous contacter</Link>
           </Button>
           <Button asChild size="sm">
-            <Link to="/trouver-un-repetiteur">Trouver un répétiteur</Link>
+            <Link to="/inscription">S'inscrire</Link>
           </Button>
         </div>
 
@@ -91,28 +99,36 @@ export function Header() {
         id="menu-mobile"
         className={cn(
           "grid overflow-hidden border-border bg-background transition-[grid-template-rows,border-color] duration-300 ease-out lg:hidden",
-          open ? "grid-rows-[1fr] border-t" : "grid-rows-[0fr] border-transparent",
+          open
+            ? "grid-rows-[1fr] border-t"
+            : "grid-rows-[0fr] border-transparent",
         )}
       >
         <div className="min-h-0">
-          <nav aria-label="Navigation mobile" className="container-page flex flex-col py-3">
+          <nav
+            aria-label="Navigation mobile"
+            className="container-page flex flex-col py-3"
+          >
             {LINKS.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 activeOptions={{ exact: true }}
                 className="rounded-xl px-3 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-                activeProps={{ className: "bg-secondary text-secondary-foreground font-semibold" }}
+                activeProps={{
+                  className:
+                    "bg-secondary text-secondary-foreground font-semibold",
+                }}
               >
                 {link.label}
               </Link>
             ))}
             <div className="mt-3 flex flex-col gap-2 pb-4">
               <Button asChild>
-                <Link to="/trouver-un-repetiteur">Trouver un répétiteur</Link>
+                <Link to="/inscription">S'inscrire</Link>
               </Button>
               <Button asChild variant="outline">
-                <Link to="/devenir-repetiteur">Devenir répétiteur</Link>
+                <Link to="/contact">Nous contacter</Link>
               </Button>
             </div>
           </nav>

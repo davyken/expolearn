@@ -3,19 +3,19 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
-import { HOW_IT_WORKS_PARENT } from "@/constants/content";
+import { HOW_IT_WORKS_STEPS } from "@/constants/content";
 
 export function HowItWorks() {
   return (
     <Section>
       <SectionHeading
         eyebrow="Comment ça marche"
-        title="Quatre étapes, de votre demande à la première séance"
-        description="Le parcours est volontairement court : vous décrivez le besoin, nous faisons le travail de recherche et de vérification."
+        title="Quatre étapes, de votre demande au début des cours"
+        description="Le même principe pour tous les services : un besoin clarifié, un programme adapté, un suivi dans la durée."
       />
 
       <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {HOW_IT_WORKS_PARENT.map((item, index) => (
+        {HOW_IT_WORKS_STEPS.map((item, index) => (
           <Reveal
             key={item.step}
             as="li"
@@ -23,9 +23,13 @@ export function HowItWorks() {
             direction={index % 2 === 0 ? "left" : "right"}
             className="relative h-full rounded-3xl bg-muted p-6"
           >
-            <span className="font-display text-sm font-bold text-primary-dark">{item.step}</span>
+            <span className="font-display text-sm font-bold text-primary-dark">
+              {item.step}
+            </span>
             <h3 className="mt-3 text-base font-bold">{item.title}</h3>
-            <p className="text-balance-p mt-2.5 text-sm text-muted-foreground">{item.text}</p>
+            <p className="text-balance-p mt-2.5 text-sm text-muted-foreground">
+              {item.text}
+            </p>
           </Reveal>
         ))}
       </ol>
