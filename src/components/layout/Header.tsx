@@ -11,6 +11,8 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isHome = pathname === "/";
+  const transparent = isHome && !scrolled && !open;
 
   useEffect(() => {
     setOpen(false);
@@ -26,8 +28,13 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b bg-background/80 backdrop-blur-lg transition-shadow duration-300",
-        scrolled ? "border-border/70 shadow-soft" : "border-transparent",
+        "sticky top-0 z-50 transition-colors duration-300",
+        transparent
+          ? "bg-transparent"
+          : cn(
+              "border-b bg-background/80 backdrop-blur-lg",
+              scrolled ? "border-border/70 shadow-soft" : "border-transparent",
+            ),
       )}
     >
       <div className="container-page flex h-16 items-center justify-between gap-4 lg:h-18">
@@ -45,7 +52,12 @@ export function Header() {
               <GraduationCap aria-hidden="true" className="size-5" />
             </span>
           </span>
-          <span className="font-display text-lg font-bold tracking-tight">
+          <span
+            className={cn(
+              "font-display text-lg font-bold tracking-tight transition-colors duration-300",
+              transparent ? "text-white" : "text-foreground",
+            )}
+          >
             ExpoLearn
           </span>
         </Link>
@@ -59,10 +71,19 @@ export function Header() {
               key={link.to}
               to={link.to}
               activeOptions={{ exact: true }}
-              className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-secondary-foreground"
+              className={cn(
+                "rounded-full px-3 py-2 text-sm font-medium transition-colors",
+                transparent
+                  ? "text-white/85 hover:bg-white/10 hover:text-white"
+                  : "text-muted-foreground hover:bg-secondary hover:text-secondary-foreground",
+              )}
               activeProps={{
-                className:
-                  "bg-secondary text-secondary-foreground font-semibold",
+                className: cn(
+                  "font-semibold",
+                  transparent
+                    ? "bg-white/15 text-white"
+                    : "bg-secondary text-secondary-foreground",
+                ),
               }}
             >
               {link.label}
@@ -71,7 +92,16 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Button asChild variant="outline" size="sm">
+          <Button
+            asChild
+            variant="outline"
+            size="sm"
+            className={
+              transparent
+                ? "border-white/40 bg-transparent text-white hover:border-white hover:bg-white/10"
+                : undefined
+            }
+          >
             <Link to="/contact">Nous contacter</Link>
           </Button>
           <Button asChild size="sm">
@@ -85,7 +115,12 @@ export function Header() {
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          className="flex size-10 items-center justify-center rounded-xl border border-border text-foreground transition-colors hover:bg-secondary lg:hidden"
+          className={cn(
+            "flex size-10 items-center justify-center rounded-xl border transition-colors lg:hidden",
+            transparent
+              ? "border-white/40 text-white hover:bg-white/10"
+              : "border-border text-foreground hover:bg-secondary",
+          )}
         >
           {open ? (
             <X aria-hidden="true" className="size-5" />

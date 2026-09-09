@@ -7,7 +7,6 @@ import { HowItWorks } from "@/components/home/HowItWorks";
 import { Audiences } from "@/components/home/Audiences";
 import { SubjectsLevels } from "@/components/home/SubjectsLevels";
 import { Testimonials } from "@/components/home/Testimonials";
-import { FinalCta } from "@/components/home/FinalCta";
 
 const TITLE =
   "ExpoLearn — Soutien scolaire, langues, concours et visa étudiant au Cameroun";
@@ -37,7 +36,6 @@ function Index() {
       <Audiences />
       <SubjectsLevels />
       <Testimonials />
-      <FinalCta />
     </>
   );
 }

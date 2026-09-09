@@ -143,10 +143,12 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border">
-        <div className="container-page flex flex-col gap-2 py-8 text-xs text-muted-foreground">
-          <p>{SITE.legalMention}</p>
+        <div className="container-page py-8 text-xs text-muted-foreground">
           <p>
-            © {new Date().getFullYear()} {SITE.name}. Tous droits réservés.
+            {SITE.legalMention} © {new Date().getFullYear()} {SITE.name}.
+            Tous droits réservés. Photos : abbilder (CC BY 2.0), GoetheSP (CC
+            BY-SA 4.0), Asaalah1 (CC BY 4.0) et Teolemon (CC BY-SA 4.0), via
+            Wikimedia Commons.
           </p>
         </div>
       </div>

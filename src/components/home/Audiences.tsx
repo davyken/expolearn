@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Eyebrow, Section } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 import parentsImage from "@/assets/parents.jpg";
-import studentsImage from "@/assets/students.jpg";
-import tutorImage from "@/assets/tutor-portrait.jpg";
+import examImage from "@/assets/preparation-concours.jpg";
+import germanClassImage from "@/assets/cours-allemand.jpg";
+import visaImage from "@/assets/visa-etudiant.jpg";
 
 const BLOCKS = [
   {
@@ -32,27 +33,41 @@ const BLOCKS = [
       "Sessions en groupe ou accompagnement individuel",
       "Suivi selon le concours ou l'examen visé",
     ],
-    image: studentsImage,
-    alt: "Deux élèves en uniforme révisent ensemble avec leurs cahiers",
+    image: examImage,
+    alt: "Des candidats passent un examen écrit dans une salle de concours",
     to: "/services/$slug" as const,
     params: { slug: "preparation-concours" as const },
     cta: "Découvrir la préparation aux concours",
   },
   {
-    eyebrow: "Pour les étudiants et jeunes professionnels",
-    title:
-      "Des langues et un accompagnement pour vos projets à l'international",
-    text: "Cours d'anglais et d'allemand en présentiel ou en ligne, et accompagnement personnalisé pour votre dossier de visa étudiant.",
+    eyebrow: "ExpoLearn Language Academy",
+    title: "Allemand et anglais, du niveau débutant à avancé",
+    text: "Des cours de langues structurés selon le Cadre européen commun de référence (A1 à C1), pour vos études, votre carrière ou votre projet en Allemagne.",
     items: [
-      "Anglais et allemand, du niveau débutant à avancé",
-      "Préparation possible aux certifications internationales",
-      "Accompagnement pour les démarches de visa étudiant et d'immigration",
+      "Allemand A1 à C1, pour vos études ou votre immigration en Allemagne",
+      "Anglais tous niveaux, avec préparation possible aux certifications",
+      "Cours en présentiel à Yaoundé ou en ligne",
     ],
-    image: tutorImage,
-    alt: "Portrait d'une jeune étudiante avec ses cahiers dans son quartier",
-    to: "/services" as const,
-    params: {},
-    cta: "Voir les cours de langues et le visa étudiant",
+    image: germanClassImage,
+    alt: "Une formatrice anime un cours d'allemand devant des apprenants avec leurs manuels",
+    to: "/services/$slug" as const,
+    params: { slug: "cours-allemand" as const },
+    cta: "Découvrir les cours d'allemand et d'anglais",
+  },
+  {
+    eyebrow: "Pour les étudiants avec un projet à l'étranger",
+    title: "Un accompagnement pour votre visa étudiant en Allemagne",
+    text: "De la constitution du dossier aux démarches d'immigration, un suivi personnalisé pour concrétiser votre projet d'études à l'étranger.",
+    items: [
+      "Point sur votre projet d'études et le pays visé",
+      "Aide à la constitution du dossier de visa étudiant",
+      "Suivi personnalisé jusqu'à la finalisation des démarches",
+    ],
+    image: visaImage,
+    alt: "Vérification d'un passeport lors des démarches de visa étudiant",
+    to: "/services/$slug" as const,
+    params: { slug: "visa-etudiant" as const },
+    cta: "Découvrir l'accompagnement visa étudiant",
   },
 ];
 
