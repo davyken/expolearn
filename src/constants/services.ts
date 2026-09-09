@@ -19,6 +19,7 @@ export type Service = {
   levels?: readonly string[];
   nextIntake?: string;
   price?: string;
+  quote?: string;
 };
 
 export const SERVICES: readonly Service[] = [
@@ -41,6 +42,7 @@ export const SERVICES: readonly Service[] = [
       "Toutes les matières couvertes, du primaire à la terminale",
     ],
     nextIntake: "Admissions en continu",
+    quote: "Réussir aujourd'hui, construire demain !",
   },
   {
     slug: "preparation-concours",
@@ -87,6 +89,7 @@ export const SERVICES: readonly Service[] = [
     ],
     nextIntake: "Prochaine rentrée : 02 novembre 2026",
     price: "20 000 FCFA / mois",
+    quote: "Ici, l'anglais devient une seconde nature !",
   },
   {
     slug: "cours-allemand",
@@ -108,6 +111,7 @@ export const SERVICES: readonly Service[] = [
       "Formateurs expérimentés en langue allemande",
     ],
     nextIntake: "Prochaine rentrée : 05 octobre 2026",
+    quote: "L'allemand à portée de main, chez ExpoLearn !",
   },
   {
     slug: "visa-etudiant",
@@ -129,6 +133,7 @@ export const SERVICES: readonly Service[] = [
     ],
     nextIntake: "Prochaine session : 05 octobre 2026",
     price: "Frais de dossier : 10 000 FCFA",
+    quote: "Il te manque du courage pour te lancer ? Ose concrétiser ton projet !",
   },
 ] as const;
 

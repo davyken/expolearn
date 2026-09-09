@@ -7,7 +7,7 @@ export const WHY_ITEMS = [
   {
     icon: "shield",
     title: "Des formateurs expérimentés",
-    text: "Des enseignants et formateurs pédagogues, à l'écoute, sélectionnés pour leur maîtrise réelle des matières et des langues enseignées.",
+    text: "Des enseignants et formateurs pédagogues, à l'écoute, sélectionnés pour leur maîtrise réelle des matières et des langues enseignées. Cinq ans d'expérience au service de la réussite des apprenants.",
   },
   {
     icon: "chart",

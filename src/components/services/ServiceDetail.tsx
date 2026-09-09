@@ -17,7 +17,11 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeading, Eyebrow } from "@/components/ui/section";
 import { Reveal } from "@/components/ui/reveal";
 import { SITE } from "@/constants/site";
-import type { Service } from "@/constants/services";
+import type { Service, ServiceSlug } from "@/constants/services";
+import flyerSoutienScolaire from "@/assets/flyer-soutien-scolaire.jpg";
+import flyerCoursAnglais from "@/assets/flyer-cours-anglais.jpg";
+import flyerCoursAllemand from "@/assets/flyer-cours-allemand.jpg";
+import flyerVisaEtudiant from "@/assets/flyer-visa-etudiant.jpg";
 
 const ICONS: Record<Service["icon"], LucideIcon> = {
   home: Home,
@@ -27,8 +31,16 @@ const ICONS: Record<Service["icon"], LucideIcon> = {
   plane: Plane,
 };
 
+const FLYERS: Partial<Record<ServiceSlug, string>> = {
+  "soutien-scolaire": flyerSoutienScolaire,
+  "cours-anglais": flyerCoursAnglais,
+  "cours-allemand": flyerCoursAllemand,
+  "visa-etudiant": flyerVisaEtudiant,
+};
+
 export function ServiceDetail({ service }: { service: Service }) {
   const Icon = ICONS[service.icon];
+  const flyer = FLYERS[service.slug];
 
   return (
     <>
@@ -136,6 +148,34 @@ export function ServiceDetail({ service }: { service: Service }) {
           ))}
         </ul>
       </Section>
+
+      {flyer ? (
+        <Section tone="muted">
+          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
+            <Reveal direction="left">
+              <Eyebrow>Notre flyer officiel</Eyebrow>
+              {service.quote ? (
+                <p className="text-balance-p mt-4 text-2xl leading-tight font-bold text-primary-dark sm:text-3xl">
+                  « {service.quote} »
+                </p>
+              ) : null}
+              <p className="mt-4 text-sm text-muted-foreground">
+                Retrouvez toutes les informations pratiques de ce programme —
+                niveaux, rentrée, tarif et contacts — sur notre support de
+                communication officiel.
+              </p>
+            </Reveal>
+            <Reveal direction="right" delay={120} className="mx-auto w-full max-w-xs">
+              <img
+                src={flyer}
+                alt={`Flyer officiel ExpoLearn — ${service.title}`}
+                loading="lazy"
+                className="w-full rounded-2xl border border-border shadow-card"
+              />
+            </Reveal>
+          </div>
+        </Section>
+      ) : null}
 
       <Section>
         <Reveal
