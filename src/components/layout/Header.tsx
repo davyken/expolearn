@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "@/constants/site";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/brand/expolearn-logo.png";
 
 const LINKS = NAV_LINKS.filter((link) => link.to !== "/");
 
@@ -11,8 +12,6 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const isHome = pathname === "/";
-  const transparent = isHome && !scrolled && !open;
 
   useEffect(() => {
     setOpen(false);
@@ -28,38 +27,21 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 transition-colors duration-300",
-        transparent
-          ? "bg-transparent"
-          : cn(
-              "border-b bg-background/80 backdrop-blur-lg",
-              scrolled ? "border-border/70 shadow-soft" : "border-transparent",
-            ),
+        "sticky top-0 z-50 border-b bg-background/80 backdrop-blur-lg transition-colors duration-300",
+        scrolled ? "border-border/70 shadow-soft" : "border-transparent",
       )}
     >
       <div className="container-page flex h-16 items-center justify-between gap-4 lg:h-18">
         <Link
           to="/"
-          className="group flex items-center gap-2.5"
+          className="group flex items-center"
           aria-label="ExpoLearn, retour à l'accueil"
         >
-          <span className="relative flex size-9 items-center justify-center">
-            <span
-              aria-hidden="true"
-              className="animate-pulse-glow absolute inset-0 -z-10 rounded-xl bg-primary blur-md"
-            />
-            <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-primary-foreground shadow-soft transition-transform duration-300 group-hover:scale-105">
-              <GraduationCap aria-hidden="true" className="size-5" />
-            </span>
-          </span>
-          <span
-            className={cn(
-              "font-display text-lg font-bold tracking-tight transition-colors duration-300",
-              transparent ? "text-white" : "text-foreground",
-            )}
-          >
-            ExpoLearn
-          </span>
+          <img
+            src={logo}
+            alt="ExpoLearn"
+            className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105 lg:h-10"
+          />
         </Link>
 
         <nav
@@ -71,19 +53,9 @@ export function Header() {
               key={link.to}
               to={link.to}
               activeOptions={{ exact: true }}
-              className={cn(
-                "rounded-full px-3 py-2 text-sm font-medium transition-colors",
-                transparent
-                  ? "text-white/85 hover:bg-white/10 hover:text-white"
-                  : "text-muted-foreground hover:bg-secondary hover:text-secondary-foreground",
-              )}
+              className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-secondary-foreground"
               activeProps={{
-                className: cn(
-                  "font-semibold",
-                  transparent
-                    ? "bg-white/15 text-white"
-                    : "bg-secondary text-secondary-foreground",
-                ),
+                className: "font-semibold bg-secondary text-secondary-foreground",
               }}
             >
               {link.label}
@@ -92,16 +64,7 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            className={
-              transparent
-                ? "border-white/40 bg-transparent text-white hover:border-white hover:bg-white/10"
-                : undefined
-            }
-          >
+          <Button asChild variant="outline" size="sm">
             <Link to="/contact">Nous contacter</Link>
           </Button>
           <Button asChild size="sm">
@@ -115,12 +78,7 @@ export function Header() {
           aria-expanded={open}
           aria-controls="menu-mobile"
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          className={cn(
-            "flex size-10 items-center justify-center rounded-xl border transition-colors lg:hidden",
-            transparent
-              ? "border-white/40 text-white hover:bg-white/10"
-              : "border-border text-foreground hover:bg-secondary",
-          )}
+          className="flex size-10 items-center justify-center rounded-xl border border-border text-foreground transition-colors hover:bg-secondary lg:hidden"
         >
           {open ? (
             <X aria-hidden="true" className="size-5" />

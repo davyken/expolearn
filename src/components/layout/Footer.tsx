@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import {
   Facebook,
-  GraduationCap,
   Instagram,
   Linkedin,
   Mail,
@@ -13,6 +12,7 @@ import {
 import { NAV_LINKS, SITE } from "@/constants/site";
 import { SERVICES } from "@/constants/services";
 import { CtaButtons } from "@/components/ui/cta-buttons";
+import logo from "@/assets/brand/expolearn-logo.png";
 
 const SOCIALS: { name: string; icon: LucideIcon }[] = [
   { name: "Facebook", icon: Facebook },
@@ -41,12 +41,7 @@ export function Footer() {
 
       <div className="container-page grid gap-10 py-16 sm:grid-cols-2 sm:py-20 lg:grid-cols-4">
         <div className="sm:col-span-2 lg:col-span-1">
-          <div className="flex items-center gap-2">
-            <span className="flex size-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-dark text-primary-foreground">
-              <GraduationCap aria-hidden="true" className="size-5" />
-            </span>
-            <span className="font-display text-lg font-bold">ExpoLearn</span>
-          </div>
+          <img src={logo} alt="ExpoLearn" className="h-10 w-auto object-contain" />
           <p className="text-balance-p mt-4 text-sm text-muted-foreground">
             {SITE.positioning}
           </p>

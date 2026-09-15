@@ -61,8 +61,8 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --shadow-soft: 0 1px 2px oklch(0.45 0.09 150 / 0.06), 0 8px 24px oklch(0.45 0.09 150 / 0.07);
-  --shadow-card: 0 1px 2px oklch(0.45 0.09 150 / 0.05), 0 12px 32px oklch(0.45 0.09 150 / 0.06);
+  --shadow-soft: 0 1px 2px oklch(0.45 0.09 143 / 0.06), 0 8px 24px oklch(0.45 0.09 143 / 0.07);
+  --shadow-card: 0 1px 2px oklch(0.45 0.09 143 / 0.05), 0 12px 32px oklch(0.45 0.09 143 / 0.06);
 }
 
 :root {
@@ -77,52 +77,52 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.219 0.019 156.5);
 
-  /* #65C466 */
-  --primary: oklch(0.749 0.164 146.3);
+  /* #0E8F13 — vert du logo ExpoLearn (relevé sur le fanion de marque) */
+  --primary: oklch(0.565 0.185 142.9);
   --primary-foreground: oklch(1 0 0);
-  /* #247A45 */
-  --primary-dark: oklch(0.483 0.119 154.6);
+  /* #0A5C0E — vert foncé du logo ExpoLearn */
+  --primary-dark: oklch(0.414 0.131 143.2);
 
-  /* #EAF8EC */
-  --secondary: oklch(0.966 0.023 149.6);
-  --secondary-foreground: oklch(0.483 0.119 154.6);
+  /* #E7F6E7 */
+  --secondary: oklch(0.966 0.023 142.9);
+  --secondary-foreground: oklch(0.414 0.131 143.2);
 
-  /* #F5FCF6 */
-  --muted: oklch(0.985 0.012 149.6);
-  /* #66736A */
-  --muted-foreground: oklch(0.541 0.016 156.2);
+  /* #F5FCF5 */
+  --muted: oklch(0.985 0.012 142.9);
+  /* #64726A */
+  --muted-foreground: oklch(0.541 0.016 149.5);
 
-  --accent: oklch(0.966 0.023 149.6);
-  --accent-foreground: oklch(0.483 0.119 154.6);
+  --accent: oklch(0.966 0.023 142.9);
+  --accent-foreground: oklch(0.414 0.131 143.2);
 
-  /* touche jaune / orange, usage ponctuel */
+  /* touche jaune / orange du logo et des supports imprimés, usage ponctuel */
   --highlight: oklch(0.83 0.155 79);
   --highlight-foreground: oklch(0.31 0.06 60);
 
-  --surface: oklch(0.985 0.012 149.6);
-  --surface-strong: oklch(0.966 0.023 149.6);
+  --surface: oklch(0.985 0.012 142.9);
+  --surface-strong: oklch(0.966 0.023 142.9);
 
   --destructive: oklch(0.577 0.212 22.5);
   --destructive-foreground: oklch(1 0 0);
 
-  --border: oklch(0.933 0.019 149.6);
-  --input: oklch(0.913 0.021 149.6);
-  --ring: oklch(0.749 0.164 146.3);
+  --border: oklch(0.933 0.019 142.9);
+  --input: oklch(0.913 0.021 142.9);
+  --ring: oklch(0.565 0.185 142.9);
 
-  --chart-1: oklch(0.749 0.164 146.3);
-  --chart-2: oklch(0.483 0.119 154.6);
+  --chart-1: oklch(0.565 0.185 142.9);
+  --chart-2: oklch(0.414 0.131 143.2);
   --chart-3: oklch(0.83 0.155 79);
-  --chart-4: oklch(0.966 0.023 149.6);
-  --chart-5: oklch(0.541 0.016 156.2);
+  --chart-4: oklch(0.966 0.023 142.9);
+  --chart-5: oklch(0.541 0.016 149.5);
 
-  --sidebar: oklch(0.985 0.012 149.6);
+  --sidebar: oklch(0.985 0.012 142.9);
   --sidebar-foreground: oklch(0.219 0.019 156.5);
-  --sidebar-primary: oklch(0.483 0.119 154.6);
+  --sidebar-primary: oklch(0.414 0.131 143.2);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.966 0.023 149.6);
-  --sidebar-accent-foreground: oklch(0.483 0.119 154.6);
-  --sidebar-border: oklch(0.933 0.019 149.6);
-  --sidebar-ring: oklch(0.749 0.164 146.3);
+  --sidebar-accent: oklch(0.966 0.023 142.9);
+  --sidebar-accent-foreground: oklch(0.414 0.131 143.2);
+  --sidebar-border: oklch(0.933 0.019 142.9);
+  --sidebar-ring: oklch(0.565 0.185 142.9);
 }
 
 @layer base {
@@ -191,6 +191,21 @@
 
 @utility animate-pop {
   animation: pop-in 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fade-swap {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-fade-swap {
+  animation: fade-swap 0.4s ease-out both;
 }
 
 @keyframes pulse-glow {
