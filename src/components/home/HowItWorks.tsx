@@ -7,7 +7,7 @@ import { HOW_IT_WORKS_STEPS } from "@/constants/content";
 
 export function HowItWorks() {
   return (
-    <Section>
+    <Section tone="muted">
       <SectionHeading
         eyebrow="Comment ça marche"
         title="Quatre étapes, de votre demande au début des cours"
@@ -21,7 +21,7 @@ export function HowItWorks() {
             as="li"
             delay={index * 90}
             direction={index % 2 === 0 ? "left" : "right"}
-            className="relative h-full rounded-3xl bg-muted p-6"
+            className="relative h-full rounded-3xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
           >
             <span className="font-display text-sm font-bold text-primary-dark">
               {item.step}

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Sparkles } from "lucide-react";
 import { CtaButtons } from "@/components/ui/cta-buttons";
 import { Eyebrow } from "@/components/ui/section";
 import { cn } from "@/lib/utils";
+import berlinSkyline from "@/assets/berlin-skyline.jpg";
 
 const LANGUAGES = [
   { flag: "🇩🇪", label: "Allemand · A1 à C1" },
@@ -67,7 +68,7 @@ function CityCarousel() {
 
   return (
     <div
-      className="animate-float mt-10 inline-flex max-w-xs flex-col gap-1 rounded-2xl border border-border bg-secondary p-4 shadow-soft sm:absolute sm:right-0 sm:bottom-0 sm:mt-0 sm:mb-10"
+      className="animate-float mt-6 inline-flex max-w-xs flex-col gap-1 rounded-2xl border border-border bg-secondary/95 p-4 shadow-soft backdrop-blur-sm sm:absolute sm:-right-4 sm:-bottom-6 sm:mt-0 lg:-right-8"
       style={{ animationDelay: "120ms" }}
     >
       <div key={index} className="animate-fade-swap flex min-h-[62px] flex-col gap-1">
@@ -105,11 +106,20 @@ function CityCarousel() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-8 pb-16 text-foreground sm:pt-10 sm:pb-24">
-      <div className="container-page relative">
+    <section className="relative overflow-hidden bg-background pt-10 pb-20 text-foreground sm:pt-14 sm:pb-28">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at 12% 8%, color-mix(in oklch, var(--color-primary) 14%, transparent), transparent 45%), radial-gradient(circle at 92% 28%, color-mix(in oklch, var(--color-highlight) 16%, transparent), transparent 50%)",
+        }}
+      />
+
+      <div className="container-page relative grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10 xl:gap-16">
         <div className="max-w-xl animate-rise">
           <Eyebrow>ExpoLearn Language Academy · Yaoundé, Cameroun</Eyebrow>
-          <h1 className="mt-5 text-3xl leading-[1.1] font-bold sm:text-4xl lg:text-5xl">
+          <h1 className="mt-5 text-4xl leading-[1.08] font-bold text-balance sm:text-5xl lg:text-[3.25rem]">
             Apprenez l'allemand, et donnez-vous un avenir en Allemagne
           </h1>
           <p className="text-balance-p mt-5 max-w-lg text-base text-muted-foreground sm:text-lg">
@@ -133,15 +143,15 @@ export function Hero() {
 
           <CtaButtons className="mt-8" />
 
-          <ul className="mt-8 grid gap-2.5">
+          <ul className="mt-9 grid gap-3 border-t border-border pt-6 sm:grid-cols-2">
             {POINTS.map((point) => (
               <li
                 key={point}
-                className="flex items-center gap-2.5 text-sm text-muted-foreground"
+                className="flex items-start gap-2.5 text-sm text-muted-foreground"
               >
                 <CheckCircle2
                   aria-hidden="true"
-                  className="size-4 shrink-0 text-primary-dark"
+                  className="mt-0.5 size-4 shrink-0 text-primary-dark"
                 />
                 {point}
               </li>
@@ -149,7 +159,32 @@ export function Hero() {
           </ul>
         </div>
 
-        <CityCarousel />
+        <div className="relative animate-rise" style={{ animationDelay: "90ms" }}>
+          <div
+            aria-hidden="true"
+            className="absolute -inset-6 -z-10 rounded-[3rem] bg-primary/10 blur-2xl"
+          />
+          <div className="relative overflow-hidden rounded-[2rem] border border-border shadow-card sm:rounded-[2.5rem]">
+            <img
+              src={berlinSkyline}
+              alt="Skyline de Berlin au coucher du soleil, avec la tour de télévision"
+              width={1600}
+              height={1066}
+              className="aspect-3/2 w-full object-cover"
+            />
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 bg-gradient-to-t from-primary-dark/35 via-transparent to-transparent"
+            />
+          </div>
+
+          <div className="animate-float absolute -top-5 left-4 inline-flex items-center gap-2 rounded-2xl border border-border bg-card px-4 py-2.5 shadow-soft sm:-left-6">
+            <Sparkles aria-hidden="true" className="size-4 text-highlight-foreground" />
+            <span className="text-sm font-semibold">5 ans d'expérience</span>
+          </div>
+
+          <CityCarousel />
+        </div>
       </div>
     </section>
   );

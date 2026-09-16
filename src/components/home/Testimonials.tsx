@@ -5,7 +5,7 @@ import { SAMPLE_TESTIMONIALS, TESTIMONIALS_NOTE } from "@/constants/content";
 
 export function Testimonials() {
   return (
-    <Section tone="muted">
+    <Section>
       <SectionHeading
         eyebrow="Témoignages"
         title="Ce que disent les familles et les apprenants"

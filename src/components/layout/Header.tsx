@@ -27,11 +27,11 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 border-b bg-background/80 backdrop-blur-lg transition-colors duration-300",
-        scrolled ? "border-border/70 shadow-soft" : "border-transparent",
+        "sticky top-0 z-50 border-b border-transparent bg-transparent transition-colors duration-300",
+        scrolled && "border-border/70 shadow-soft",
       )}
     >
-      <div className="container-page flex h-16 items-center justify-between gap-4 lg:h-18">
+      <div className="container-page flex h-18 items-center justify-between gap-4 lg:h-20">
         <Link
           to="/"
           className="group flex items-center"
@@ -40,7 +40,7 @@ export function Header() {
           <img
             src={logo}
             alt="ExpoLearn"
-            className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105 lg:h-10"
+            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105 lg:h-14"
           />
         </Link>
 
