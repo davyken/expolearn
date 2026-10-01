@@ -101,7 +101,7 @@ export function Hero() {
         className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-night via-night/40 to-transparent"
       />
 
-      <div className="container-page grid flex-1 items-center gap-12 py-14 lg:grid-cols-[1.25fr_0.75fr] lg:py-20">
+      <div className="container-page grid flex-1 items-center gap-10 py-8 lg:grid-cols-[1.25fr_0.75fr] lg:py-6">
         <div className="max-w-2xl animate-rise">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wide backdrop-blur-md sm:text-sm">
             <span className="relative flex size-2">
@@ -111,19 +111,19 @@ export function Hero() {
             Inscriptions ouvertes · Rentrée allemand le 05 octobre
           </p>
 
-          <h1 className="mt-6 text-5xl leading-[0.98] font-extrabold sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
+          <h1 className="mt-5 text-5xl leading-[0.98] font-extrabold sm:text-6xl xl:text-7xl">
             Ton avenir n'a pas de{" "}
             <span className="font-serif font-normal text-sunset italic">
               frontières.
             </span>
           </h1>
 
-          <p className="text-balance-p mt-6 max-w-lg text-base text-night-foreground/80 sm:text-lg">
+          <p className="text-balance-p mt-5 max-w-lg text-base text-night-foreground/80 sm:text-lg">
             Depuis Yaoundé, ExpoLearn te prépare à partir étudier à l'étranger :
             la langue, le dossier, le visa. Tu n'as plus qu'à boucler ta valise.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Button
               asChild
               size="lg"
@@ -165,7 +165,7 @@ export function Hero() {
       </div>
 
       <div className="border-t border-white/10 bg-night/40 backdrop-blur-md">
-        <dl className="container-page grid grid-cols-2 gap-y-5 py-6 sm:grid-cols-4">
+        <dl className="container-page grid grid-cols-2 gap-y-4 py-4 sm:grid-cols-4">
           {STATS.map((stat) => (
             <div
               key={stat.value}
@@ -173,7 +173,7 @@ export function Hero() {
             >
               <dt className="sr-only">{stat.label}</dt>
               <dd>
-                <span className="block font-display text-xl font-bold sm:text-2xl">
+                <span className="block font-display text-lg font-bold sm:text-xl">
                   {stat.value}
                 </span>
                 <span className="text-xs text-night-foreground/65 sm:text-sm">
