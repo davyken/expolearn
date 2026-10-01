@@ -1,6 +1,6 @@
 import { c as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { t as Button } from "./button-BsdMR-Om.mjs";
-import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as Reveal } from "./reveal-BuUuG7ND.mjs";
 import { N as ArrowRight, c as Quote, f as MessageCircle } from "../_libs/lucide-react.mjs";
 import { i as TESTIMONIALS_NOTE, r as SAMPLE_TESTIMONIALS } from "./content-BjaSUbXz.mjs";

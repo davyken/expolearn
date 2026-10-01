@@ -1,5 +1,5 @@
 import { r as getServiceBySlug } from "./_ssr/services-B28n1Riz.mjs";
-import { j as notFound, m as createFileRoute, p as lazyRouteComponent } from "./_libs/@tanstack/react-router+[...].mjs";
+import { _ as lazyRouteComponent, q as notFound, v as createFileRoute } from "./_libs/@tanstack/react-router+[...].mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/_slug-Bj3Wt6zg.js
 var $$splitComponentImporter = () => import("./_slug-C-SPsv7u.mjs");
 var Route = createFileRoute("/services/$slug")({

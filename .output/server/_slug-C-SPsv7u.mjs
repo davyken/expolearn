@@ -1,7 +1,7 @@
 import { c as require_jsx_runtime } from "./_libs/@radix-ui/react-accordion+[...].mjs";
 import { t as Button } from "./_ssr/button-BsdMR-Om.mjs";
 import { o as SITE } from "./_ssr/site-B4pil6fg.mjs";
-import { g as Link } from "./_libs/@tanstack/react-router+[...].mjs";
+import { b as Link } from "./_libs/@tanstack/react-router+[...].mjs";
 import { t as Route } from "./_slug-Bj3Wt6zg.mjs";
 import { t as Reveal } from "./_ssr/reveal-BuUuG7ND.mjs";
 import { n as Section, r as SectionHeading, t as Eyebrow } from "./_ssr/section-BXjgiglf.mjs";

@@ -4,19 +4,19 @@ import { c as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[..
 import { r as cn, t as Button } from "./button-BsdMR-Om.mjs";
 import { a as NAV_LINKS, o as SITE } from "./site-B4pil6fg.mjs";
 import { n as SERVICES } from "./services-B28n1Riz.mjs";
-import { _ as useRouter, c as HeadContent, d as createRouter, f as Outlet, g as Link, h as createRootRouteWithContext, l as useRouterState, m as createFileRoute, p as lazyRouteComponent, s as Scripts } from "../_libs/@tanstack/react-router+[...].mjs";
+import { _ as lazyRouteComponent, b as Link, d as Scripts, f as HeadContent, g as Outlet, h as createRouter, p as useRouterState, v as createFileRoute, x as useRouter, y as createRootRouteWithContext } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as Route$7 } from "../_slug-Bj3Wt6zg.mjs";
 import { C as Facebook, M as ArrowUpRight, b as Instagram, d as Phone, f as MessageCircle, g as Linkedin, h as Mail, m as MapPin, p as Menu, s as Send, t as X } from "../_libs/lucide-react.mjs";
 import { t as FAQ_ITEMS } from "./content-BjaSUbXz.mjs";
 import { t as buildWhatsAppLink } from "./whatsapp-BDPBKj1W.mjs";
 import { i as stringType, r as objectType } from "../_libs/zod.mjs";
 import { t as Route$8 } from "./inscription-MGWyo_t0.mjs";
-import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-DgzA9LNH.js
+import { t as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/router-BBn6sUo7.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-DbYw1nrx.css";
+var styles_default = "/assets/styles-BLl6eXGh.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -562,7 +562,7 @@ function RootComponent() {
 		})
 	});
 }
-var $$splitComponentImporter$5 = () => import("./routes-BBwi2DQk.mjs");
+var $$splitComponentImporter$5 = () => import("./routes-CXZ8GIl_.mjs");
 var TITLE$5 = "ExpoLearn — Langues, visa étudiant et formations pour étudier à l'étranger";
 var DESCRIPTION$5 = "Depuis Yaoundé, ExpoLearn te prépare à partir étudier à l'étranger : cours d'allemand et d'anglais, accompagnement au visa étudiant, soutien scolaire et préparation aux concours.";
 var Route$5 = createFileRoute("/")({

@@ -1,5 +1,5 @@
 globalThis.__nitro_main__ = import.meta.url;
-import { i as HTTPError, n as defineLazyEventHandler, t as H3Core } from "./_libs/h3+rou3+srvx.mjs";
+import { n as HTTPError, r as defineLazyEventHandler, t as H3Core } from "./_libs/h3+rou3+srvx.mjs";
 import { t as HookableCore } from "./_libs/hookable.mjs";
 import { r as FastResponse } from "./_libs/h3-v2+rou3+srvx.mjs";
 //#region #nitro-vite-setup
@@ -16,360 +16,360 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
+	"/favicon.ico": {
+		"type": "image/vnd.microsoft.icon",
+		"etag": "\"2183-1f4G1pt6vwx1KgTmrRVSt3nUVos\"",
+		"mtime": "2026-10-01T21:26:15.044Z",
+		"size": 8579,
+		"path": "../public/favicon.ico"
+	},
 	"/favicon.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"ba48-n0ubOLHbxeECkufssCEKL4ntkY4\"",
-		"mtime": "2026-10-01T20:53:36.540Z",
+		"mtime": "2026-10-01T21:26:15.044Z",
 		"size": 47688,
 		"path": "../public/favicon.svg"
 	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"a0-CKGXSIe7TSsqDTmGm/nY1t/o5d0\"",
-		"mtime": "2026-10-01T20:53:36.539Z",
+		"mtime": "2026-10-01T21:26:15.044Z",
 		"size": 160,
 		"path": "../public/robots.txt"
 	},
-	"/assets/FinalCta-BBIF6IuU.js": {
+	"/assets/FinalCta-BEueBXhS.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"bee-iX6rH4CtewxH7TUKdWtU9Kz8AXY\"",
-		"mtime": "2026-10-01T20:53:33.432Z",
+		"etag": "\"bee-lvO99piXYvhI98qlPP4ek11SPmA\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 3054,
-		"path": "../public/assets/FinalCta-BBIF6IuU.js"
+		"path": "../public/assets/FinalCta-BEueBXhS.js"
 	},
-	"/assets/ServiceCard-CAJWqDa4.js": {
+	"/assets/ServiceCard-bpQs6vj5.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"4f1-f0gw2JaNgV3QcTYAiZs6UX2eV/w\"",
-		"mtime": "2026-10-01T20:53:33.432Z",
+		"etag": "\"4f1-d/lcf9lANgzQblAFs6a97R83DRI\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 1265,
-		"path": "../public/assets/ServiceCard-CAJWqDa4.js"
+		"path": "../public/assets/ServiceCard-bpQs6vj5.js"
 	},
-	"/assets/_slug-SWPbDU7L.js": {
+	"/assets/_slug-BEopuRFP.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"19f5-GboUcI/haJVlmj40jc0IvR8u+OU\"",
-		"mtime": "2026-10-01T20:53:33.432Z",
+		"etag": "\"19f5-DbB+VI+3J5u45ZmJGhBdjpfA1j8\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 6645,
-		"path": "../public/assets/_slug-SWPbDU7L.js"
+		"path": "../public/assets/_slug-BEopuRFP.js"
 	},
-	"/assets/_slug-xBR4qvUw.js": {
+	"/assets/_slug-XeoPpxzj.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"475-2DcpJDjZelJ85yQPciIZODGISuU\"",
-		"mtime": "2026-10-01T20:53:33.432Z",
+		"etag": "\"475-npHdQaAbFvPpvnHxhEMNNFOunyU\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 1141,
-		"path": "../public/assets/_slug-xBR4qvUw.js"
+		"path": "../public/assets/_slug-XeoPpxzj.js"
 	},
-	"/assets/a-propos-C1050Cuy.js": {
+	"/assets/a-propos-BPWQoerB.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"d3c-OmHFqUT33xJyzStnMC3NrhZUhQM\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
+		"etag": "\"d3c-y/ok6v3mnUvGXh860VvsBg7NAww\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 3388,
-		"path": "../public/assets/a-propos-C1050Cuy.js"
+		"path": "../public/assets/a-propos-BPWQoerB.js"
 	},
 	"/assets/arrow-right-EBAjmpF7.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"9b-2chggya66/hcMXxoekmkmDJQiF0\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 155,
 		"path": "../public/assets/arrow-right-EBAjmpF7.js"
 	},
 	"/assets/button-B90FGYjA.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"a320-klcBe0TXF0IPZtd1RCoYK58Ry1Q\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 41760,
 		"path": "../public/assets/button-B90FGYjA.js"
 	},
 	"/assets/berlin-skyline-oQboN8si.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"410c3-dNx6VH9X/wzp30SwLl4HVrKOgKo\"",
-		"mtime": "2026-10-01T20:53:33.436Z",
+		"mtime": "2026-10-01T21:26:13.979Z",
 		"size": 266435,
 		"path": "../public/assets/berlin-skyline-oQboN8si.jpg"
 	},
 	"/assets/canada-quebec-Wl5KH3--.webp": {
 		"type": "image/webp",
 		"etag": "\"1d66a-kA3WGcZNcFOn7zASZvcwLtqfuhg\"",
-		"mtime": "2026-10-01T20:53:33.437Z",
+		"mtime": "2026-10-01T21:26:13.979Z",
 		"size": 120426,
 		"path": "../public/assets/canada-quebec-Wl5KH3--.webp"
-	},
-	"/assets/canada-moraine-e2HOlRf7.webp": {
-		"type": "image/webp",
-		"etag": "\"34e62-wZWZOT798o6gQrXy6iC3tspiKuc\"",
-		"mtime": "2026-10-01T20:53:33.437Z",
-		"size": 216674,
-		"path": "../public/assets/canada-moraine-e2HOlRf7.webp"
 	},
 	"/assets/canada-toronto-CI7KtZjJ.webp": {
 		"type": "image/webp",
 		"etag": "\"122ec-ceISbGg5gBvzkVhRAY3MVfZ1MoY\"",
-		"mtime": "2026-10-01T20:53:33.437Z",
+		"mtime": "2026-10-01T21:26:13.979Z",
 		"size": 74476,
 		"path": "../public/assets/canada-toronto-CI7KtZjJ.webp"
 	},
 	"/assets/circle-check-D6W3j0tT.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"a8-XCpavDMysqduHxK3xi274qYyUEU\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 168,
 		"path": "../public/assets/circle-check-D6W3j0tT.js"
 	},
-	"/assets/comment-ca-marche-B3GOF4DI.js": {
+	"/assets/comment-ca-marche-BKN4h2qV.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"6b1-YVBGd/p23/2anTN05yswBT7jzJA\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
+		"etag": "\"6b1-GUg5Oh4cYwYd9lFk6UyduywyyY8\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 1713,
-		"path": "../public/assets/comment-ca-marche-B3GOF4DI.js"
+		"path": "../public/assets/comment-ca-marche-BKN4h2qV.js"
 	},
-	"/assets/contact-I9789ZCn.js": {
+	"/assets/contact-Cyy0SKoN.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1667-/ht0pW66RO/9EErE2N8W4RuNvt4\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
+		"etag": "\"1667-xNwlNA/ycPj5hMVw7sMD4VeIt1Y\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 5735,
-		"path": "../public/assets/contact-I9789ZCn.js"
+		"path": "../public/assets/contact-Cyy0SKoN.js"
 	},
-	"/assets/canada-vancouver-BzwufZkX.webp": {
+	"/assets/canada-moraine-e2HOlRf7.webp": {
 		"type": "image/webp",
-		"etag": "\"3182e-n7Mccf2Kk5XBT+Bx56vGRzOr9rI\"",
-		"mtime": "2026-10-01T20:53:33.437Z",
-		"size": 202798,
-		"path": "../public/assets/canada-vancouver-BzwufZkX.webp"
+		"etag": "\"34e62-wZWZOT798o6gQrXy6iC3tspiKuc\"",
+		"mtime": "2026-10-01T21:26:13.979Z",
+		"size": 216674,
+		"path": "../public/assets/canada-moraine-e2HOlRf7.webp"
 	},
-	"/assets/cta-buttons-wbsl2Ww1.js": {
+	"/assets/cta-buttons-Btj1cVZx.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"2e1-lhqHYJ/bt2J2fPPNirsLlFkucRw\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
+		"etag": "\"2e1-xphggSAw3OP/bIIxpPUX2foTaHs\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 737,
-		"path": "../public/assets/cta-buttons-wbsl2Ww1.js"
-	},
-	"/assets/faq-bVAIkXTB.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"58ef-6W3rv88OY/WAndMUpHblJuorFoU\"",
-		"mtime": "2026-10-01T20:53:33.433Z",
-		"size": 22767,
-		"path": "../public/assets/faq-bVAIkXTB.js"
-	},
-	"/assets/cours-allemand-BmS0fs3m.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"2791b-khhr6wF8u1COU8ysawKTlnT5L4A\"",
-		"mtime": "2026-10-01T20:53:33.438Z",
-		"size": 162075,
-		"path": "../public/assets/cours-allemand-BmS0fs3m.jpg"
+		"path": "../public/assets/cta-buttons-Btj1cVZx.js"
 	},
 	"/assets/cta-takeoff-DvGg_1fK.webp": {
 		"type": "image/webp",
 		"etag": "\"16e46-OP3ZwF1eZhmUuF4aK7H54ozlVG0\"",
-		"mtime": "2026-10-01T20:53:33.438Z",
+		"mtime": "2026-10-01T21:26:13.980Z",
 		"size": 93766,
 		"path": "../public/assets/cta-takeoff-DvGg_1fK.webp"
+	},
+	"/assets/canada-vancouver-BzwufZkX.webp": {
+		"type": "image/webp",
+		"etag": "\"3182e-n7Mccf2Kk5XBT+Bx56vGRzOr9rI\"",
+		"mtime": "2026-10-01T21:26:13.979Z",
+		"size": 202798,
+		"path": "../public/assets/canada-vancouver-BzwufZkX.webp"
+	},
+	"/assets/faq-CEt8UqZX.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"58cf-oOJXgeZS2YaMdcXlYUxeGR0xXgE\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
+		"size": 22735,
+		"path": "../public/assets/faq-CEt8UqZX.js"
+	},
+	"/assets/cours-allemand-BmS0fs3m.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"2791b-khhr6wF8u1COU8ysawKTlnT5L4A\"",
+		"mtime": "2026-10-01T21:26:13.979Z",
+		"size": 162075,
+		"path": "../public/assets/cours-allemand-BmS0fs3m.jpg"
 	},
 	"/assets/flyer-cours-allemand-LpBqv5-9.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"2fc5b-e0i+LjP41yULlcEG2+x+422bHzA\"",
-		"mtime": "2026-10-01T20:53:33.439Z",
+		"mtime": "2026-10-01T21:26:13.980Z",
 		"size": 195675,
 		"path": "../public/assets/flyer-cours-allemand-LpBqv5-9.jpg"
 	},
 	"/assets/expolearn-logo-BgBy4vcF.png": {
 		"type": "image/png",
 		"etag": "\"6b1f5-1OP4RJxoUtoKT4YExyUp4JUcQXg\"",
-		"mtime": "2026-10-01T20:53:33.439Z",
+		"mtime": "2026-10-01T21:26:13.980Z",
 		"size": 438773,
 		"path": "../public/assets/expolearn-logo-BgBy4vcF.png"
-	},
-	"/favicon.ico": {
-		"type": "image/vnd.microsoft.icon",
-		"etag": "\"2183-1f4G1pt6vwx1KgTmrRVSt3nUVos\"",
-		"mtime": "2026-10-01T20:53:36.539Z",
-		"size": 8579,
-		"path": "../public/favicon.ico"
 	},
 	"/hero-video.mp4": {
 		"type": "video/mp4",
 		"etag": "\"103d68-Ic0ONn0Z46vmULpdOyxaS8rdfNY\"",
-		"mtime": "2026-10-01T20:53:36.543Z",
+		"mtime": "2026-10-01T21:26:15.046Z",
 		"size": 1064296,
 		"path": "../public/hero-video.mp4"
 	},
-	"/assets/flyer-cours-anglais-CR96Icmj.jpg": {
+	"/assets/flyer-soutien-scolaire-CI8lD0xe.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"2c581-Y6jfFjKDX7X1YOhuzuuH0c2osyc\"",
-		"mtime": "2026-10-01T20:53:33.440Z",
-		"size": 181633,
-		"path": "../public/assets/flyer-cours-anglais-CR96Icmj.jpg"
+		"etag": "\"212fa-fUAvUF8hp3bSEWhZEyQ7rkcDthE\"",
+		"mtime": "2026-10-01T21:26:13.980Z",
+		"size": 135930,
+		"path": "../public/assets/flyer-soutien-scolaire-CI8lD0xe.jpg"
 	},
-	"/assets/form-field-B3thy03P.js": {
+	"/assets/form-field-pzhTrj6a.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"810b-FhtZnK7/CyFAn8sSXhcZvl1GPHk\"",
-		"mtime": "2026-10-01T20:53:33.434Z",
-		"size": 33035,
-		"path": "../public/assets/form-field-B3thy03P.js"
+		"etag": "\"7aed-UZl5jiI2cCZnHqdmOqRQx8cAguM\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
+		"size": 31469,
+		"path": "../public/assets/form-field-pzhTrj6a.js"
 	},
 	"/assets/hero-wing-FeZqUtnD.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"37-LVyS+HKg3QPMSV3d/8t7OWfgjew\"",
-		"mtime": "2026-10-01T20:53:33.434Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 55,
 		"path": "../public/assets/hero-wing-FeZqUtnD.js"
 	},
 	"/assets/hero-wing-ToLrftfd.webp": {
 		"type": "image/webp",
 		"etag": "\"104c0-TK+1zx61wmAU0iktI5JcdI95db0\"",
-		"mtime": "2026-10-01T20:53:33.441Z",
+		"mtime": "2026-10-01T21:26:13.981Z",
 		"size": 66752,
 		"path": "../public/assets/hero-wing-ToLrftfd.webp"
 	},
-	"/assets/flyer-soutien-scolaire-CI8lD0xe.jpg": {
+	"/assets/flyer-cours-anglais-CR96Icmj.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"212fa-fUAvUF8hp3bSEWhZEyQ7rkcDthE\"",
-		"mtime": "2026-10-01T20:53:33.440Z",
-		"size": 135930,
-		"path": "../public/assets/flyer-soutien-scolaire-CI8lD0xe.jpg"
+		"etag": "\"2c581-Y6jfFjKDX7X1YOhuzuuH0c2osyc\"",
+		"mtime": "2026-10-01T21:26:13.980Z",
+		"size": 181633,
+		"path": "../public/assets/flyer-cours-anglais-CR96Icmj.jpg"
 	},
 	"/assets/flyer-visa-etudiant-BXM_CwEJ.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"201c3-Ji25/qo9Jq3waVczq/fdyw7Am34\"",
-		"mtime": "2026-10-01T20:53:33.441Z",
+		"mtime": "2026-10-01T21:26:13.980Z",
 		"size": 131523,
 		"path": "../public/assets/flyer-visa-etudiant-BXM_CwEJ.jpg"
 	},
-	"/assets/inscription-C8ZTNQUg.js": {
+	"/assets/inscription-CVSHrEz9.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"32ea-bEUE7BMvQZbPDaKQfeRr6+lN/rY\"",
-		"mtime": "2026-10-01T20:53:33.434Z",
+		"etag": "\"32ea-nXbMSjalolm49z0UnV1TF6FFMOQ\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 13034,
-		"path": "../public/assets/inscription-C8ZTNQUg.js"
+		"path": "../public/assets/inscription-CVSHrEz9.js"
 	},
 	"/assets/landmark-W9kWjRtc.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"26a-HUaZb8kCuhwX3Nv030RhL+WEM5g\"",
-		"mtime": "2026-10-01T20:53:33.434Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 618,
 		"path": "../public/assets/landmark-W9kWjRtc.js"
 	},
-	"/assets/link-DNijvEcg.js": {
+	"/assets/index-tYnBilM4.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"68ae-u6bsr/RH2NL8XEcCCs9USU+xLVQ\"",
-		"mtime": "2026-10-01T20:53:33.434Z",
-		"size": 26798,
-		"path": "../public/assets/link-DNijvEcg.js"
+		"etag": "\"52f71-OsS5hrfdNK1X3YIY5MEBz99m0k8\"",
+		"mtime": "2026-10-01T21:26:13.976Z",
+		"size": 339825,
+		"path": "../public/assets/index-tYnBilM4.js"
+	},
+	"/assets/link-r0RpPSw8.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"2c25-POIUFJ1Dxd9F42b5YLRuZNDvymo\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
+		"size": 11301,
+		"path": "../public/assets/link-r0RpPSw8.js"
 	},
 	"/assets/page-hero-CReQu7ha.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"460-bbA6lhIAi3dAnMvvwBcTtcewSu8\"",
-		"mtime": "2026-10-01T20:53:33.435Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 1120,
 		"path": "../public/assets/page-hero-CReQu7ha.js"
 	},
 	"/assets/plane-window-BzN1B0Gz.webp": {
 		"type": "image/webp",
 		"etag": "\"820c-molI05mOCa+n7AFs3jtYoxmvfo0\"",
-		"mtime": "2026-10-01T20:53:33.442Z",
+		"mtime": "2026-10-01T21:26:13.981Z",
 		"size": 33292,
 		"path": "../public/assets/plane-window-BzN1B0Gz.webp"
 	},
-	"/assets/preload-helper-CdkdjnoX.js": {
+	"/assets/preload-helper-Cxo1jnk6.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"1860-cnnb1Iuvh5Skh1gAjbsHUUTVcnU\"",
-		"mtime": "2026-10-01T20:53:33.435Z",
-		"size": 6240,
-		"path": "../public/assets/preload-helper-CdkdjnoX.js"
+		"etag": "\"164b-sC2GypYAAZ5aqoWSGUmJVQ6ad4o\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
+		"size": 5707,
+		"path": "../public/assets/preload-helper-Cxo1jnk6.js"
 	},
 	"/assets/reveal-BGF_U1pO.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"385-Hjm2zCXt8MI85t1HoPsqqdgsdAg\"",
-		"mtime": "2026-10-01T20:53:33.435Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 901,
 		"path": "../public/assets/reveal-BGF_U1pO.js"
 	},
-	"/assets/index-B_V3s7Ak.js": {
+	"/assets/routes-Bvua4ke0.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"50d9a-MKDk+NT1vj4m9JTRm76oN9mLt78\"",
-		"mtime": "2026-10-01T20:53:33.430Z",
-		"size": 331162,
-		"path": "../public/assets/index-B_V3s7Ak.js"
+		"etag": "\"569a-Ip9sLSTuAVKr2Yv4X1l9WoBDwh0\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
+		"size": 22170,
+		"path": "../public/assets/routes-Bvua4ke0.js"
 	},
 	"/assets/parents-BwwjPBFN.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"2b82a-/TmW5jmfiF0NXVEHIULA1LpCB0M\"",
-		"mtime": "2026-10-01T20:53:33.441Z",
+		"mtime": "2026-10-01T21:26:13.981Z",
 		"size": 178218,
 		"path": "../public/assets/parents-BwwjPBFN.jpg"
-	},
-	"/assets/routes-jobZQjrz.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"56ae-lC6FaOHi/6zSKtVVAtYhQqigRwA\"",
-		"mtime": "2026-10-01T20:53:33.435Z",
-		"size": 22190,
-		"path": "../public/assets/routes-jobZQjrz.js"
 	},
 	"/assets/section-B_aIkOjX.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"4c5-moPiVw/NDT75nwUmiPE73eF8Yg8\"",
-		"mtime": "2026-10-01T20:53:33.435Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 1221,
 		"path": "../public/assets/section-B_aIkOjX.js"
+	},
+	"/assets/services-CfhyVKcJ.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"39a-4p6qs44fTVsbXOO2s+zdgz1cFNM\"",
+		"mtime": "2026-10-01T21:26:13.978Z",
+		"size": 922,
+		"path": "../public/assets/services-CfhyVKcJ.js"
 	},
 	"/assets/services-4v2HvW2s.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"125b-NixBX//GVj0hclwucP+fJn3z69g\"",
-		"mtime": "2026-10-01T20:53:33.435Z",
+		"mtime": "2026-10-01T21:26:13.978Z",
 		"size": 4699,
 		"path": "../public/assets/services-4v2HvW2s.js"
-	},
-	"/assets/services-DfWdtwvI.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"39a-vL7UiKuLtT0+nzKLKw6LYPJGanI\"",
-		"mtime": "2026-10-01T20:53:33.436Z",
-		"size": 922,
-		"path": "../public/assets/services-DfWdtwvI.js"
 	},
 	"/assets/site-BD7UE8Kt.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"7b3-fKkkfRVu/Jy/+vhhc2fV+L5j0cY\"",
-		"mtime": "2026-10-01T20:53:33.436Z",
+		"mtime": "2026-10-01T21:26:13.979Z",
 		"size": 1971,
 		"path": "../public/assets/site-BD7UE8Kt.js"
 	},
-	"/assets/preparation-concours-U1ILbRr7.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"3d185-IsvUzCbYGlrgZG8bjBKE+tA3rHw\"",
-		"mtime": "2026-10-01T20:53:33.442Z",
-		"size": 250245,
-		"path": "../public/assets/preparation-concours-U1ILbRr7.jpg"
-	},
-	"/assets/students-BDCs09V1.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"1fb12-yysQtrtgHE+vkDz/W3bWxqQ5ZCI\"",
-		"mtime": "2026-10-01T20:53:33.442Z",
-		"size": 129810,
-		"path": "../public/assets/students-BDCs09V1.jpg"
-	},
-	"/assets/styles-DbYw1nrx.css": {
+	"/assets/styles-BLl6eXGh.css": {
 		"type": "text/css; charset=utf-8",
-		"etag": "\"1b37e-lx2nNs4MVxGiY9tUb+Vyqo1x7A0\"",
-		"mtime": "2026-10-01T20:53:33.443Z",
-		"size": 111486,
-		"path": "../public/assets/styles-DbYw1nrx.css"
+		"etag": "\"1b3b5-PCLz/Gj51gMHHYwEAgRD/ShLLy0\"",
+		"mtime": "2026-10-01T21:26:13.981Z",
+		"size": 111541,
+		"path": "../public/assets/styles-BLl6eXGh.css"
 	},
 	"/assets/target-DjWG0gsG.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"2d2-zucLIadwqTnM34jeu4LQMUC5jyY\"",
-		"mtime": "2026-10-01T20:53:33.436Z",
+		"mtime": "2026-10-01T21:26:13.979Z",
 		"size": 722,
 		"path": "../public/assets/target-DjWG0gsG.js"
+	},
+	"/assets/students-BDCs09V1.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"1fb12-yysQtrtgHE+vkDz/W3bWxqQ5ZCI\"",
+		"mtime": "2026-10-01T21:26:13.981Z",
+		"size": 129810,
+		"path": "../public/assets/students-BDCs09V1.jpg"
+	},
+	"/assets/preparation-concours-U1ILbRr7.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"3d185-IsvUzCbYGlrgZG8bjBKE+tA3rHw\"",
+		"mtime": "2026-10-01T21:26:13.981Z",
+		"size": 250245,
+		"path": "../public/assets/preparation-concours-U1ILbRr7.jpg"
 	},
 	"/assets/types-BLvZEIXI.js": {
 		"type": "text/javascript; charset=utf-8",
 		"etag": "\"dd15-qszyFto7EvnYTtqCiVyeYsd/B2U\"",
-		"mtime": "2026-10-01T20:53:33.436Z",
+		"mtime": "2026-10-01T21:26:13.979Z",
 		"size": 56597,
 		"path": "../public/assets/types-BLvZEIXI.js"
 	},
 	"/assets/visa-etudiant-DMGbnmTb.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"330a7-nRqbsizggHf1bezY5sfKSCCVCL4\"",
-		"mtime": "2026-10-01T20:53:33.443Z",
+		"mtime": "2026-10-01T21:26:13.981Z",
 		"size": 209063,
 		"path": "../public/assets/visa-etudiant-DMGbnmTb.jpg"
 	}

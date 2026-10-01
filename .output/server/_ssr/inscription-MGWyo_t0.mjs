@@ -1,5 +1,5 @@
 import { n as SERVICES } from "./services-B28n1Riz.mjs";
-import { m as createFileRoute, p as lazyRouteComponent } from "../_libs/@tanstack/react-router+[...].mjs";
+import { _ as lazyRouteComponent, v as createFileRoute } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as ZodIssueCode, i as stringType, n as enumType, r as objectType, t as arrayType } from "../_libs/zod.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/inscription-MGWyo_t0.js
 var SLUGS = SERVICES.map((service) => service.slug);

@@ -1,13 +1,13 @@
 import { c as require_jsx_runtime } from "../_libs/@radix-ui/react-accordion+[...].mjs";
 import { r as cn, t as Button } from "./button-BsdMR-Om.mjs";
 import { n as SERVICES } from "./services-B28n1Riz.mjs";
-import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+import { b as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as Reveal } from "./reveal-BuUuG7ND.mjs";
 import { M as ArrowUpRight, N as ArrowRight, S as FileCheckCorner, a as Stamp, f as MessageCircle, j as CalendarDays, k as ChartColumn, l as Plane, m as MapPin, o as ShieldCheck, r as Target, u as PlaneTakeoff, v as Languages, w as Earth } from "../_libs/lucide-react.mjs";
 import { t as hero_wing_default } from "./hero-wing-549yQK3d.mjs";
 import { t as buildWhatsAppLink } from "./whatsapp-BDPBKj1W.mjs";
 import { t as FinalCta } from "./FinalCta-DjEwmBFi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BBwi2DQk.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CXZ8GIl_.js
 var import_jsx_runtime = require_jsx_runtime();
 var STATS = [
 	{
@@ -157,7 +157,7 @@ function Hero() {
 				className: "absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-night via-night/40 to-transparent"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "container-page grid flex-1 items-center gap-12 py-14 lg:grid-cols-[1.25fr_0.75fr] lg:py-20",
+				className: "container-page grid flex-1 items-center gap-10 py-8 lg:grid-cols-[1.25fr_0.75fr] lg:py-6",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "max-w-2xl animate-rise",
 					children: [
@@ -169,7 +169,7 @@ function Hero() {
 							}), "Inscriptions ouvertes · Rentrée allemand le 05 octobre"]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-							className: "mt-6 text-5xl leading-[0.98] font-extrabold sm:text-6xl lg:text-7xl xl:text-[5.5rem]",
+							className: "mt-5 text-5xl leading-[0.98] font-extrabold sm:text-6xl xl:text-7xl",
 							children: [
 								"Ton avenir n'a pas de",
 								" ",
@@ -180,11 +180,11 @@ function Hero() {
 							]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-balance-p mt-6 max-w-lg text-base text-night-foreground/80 sm:text-lg",
+							className: "text-balance-p mt-5 max-w-lg text-base text-night-foreground/80 sm:text-lg",
 							children: "Depuis Yaoundé, ExpoLearn te prépare à partir étudier à l'étranger : la langue, le dossier, le visa. Tu n'as plus qu'à boucler ta valise."
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "mt-9 flex flex-col gap-3 sm:flex-row",
+							className: "mt-7 flex flex-col gap-3 sm:flex-row",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 								asChild: true,
 								size: "lg",
@@ -219,14 +219,14 @@ function Hero() {
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "border-t border-white/10 bg-night/40 backdrop-blur-md",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dl", {
-					className: "container-page grid grid-cols-2 gap-y-5 py-6 sm:grid-cols-4",
+					className: "container-page grid grid-cols-2 gap-y-4 py-4 sm:grid-cols-4",
 					children: STATS.map((stat) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "border-white/10 px-1 sm:border-l sm:px-6 sm:first:border-l-0 sm:first:pl-0",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dt", {
 							className: "sr-only",
 							children: stat.label
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("dd", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "block font-display text-xl font-bold sm:text-2xl",
+							className: "block font-display text-lg font-bold sm:text-xl",
 							children: stat.value
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							className: "text-xs text-night-foreground/65 sm:text-sm",
