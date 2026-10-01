@@ -1,0 +1,1 @@
+var e=`/assets/hero-wing-ToLrftfd.webp`;export{e as t};

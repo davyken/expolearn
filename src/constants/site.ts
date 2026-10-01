@@ -24,7 +24,7 @@ export const SITE = {
 export const NAV_LINKS = [
   { label: "Accueil", to: "/" },
   { label: "Nos services", to: "/services" },
-  { label: "Comment ça marche", to: "/comment-ca-marche" },
+  { label: "Parcours", to: "/comment-ca-marche" },
   { label: "À propos", to: "/a-propos" },
   { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },

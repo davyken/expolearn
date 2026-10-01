@@ -44,7 +44,7 @@ export function ServiceDetail({ service }: { service: Service }) {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-primary-dark py-16 text-primary-foreground sm:py-20">
+      <section className="under-header relative overflow-hidden bg-night text-primary-foreground">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -53,7 +53,7 @@ export function ServiceDetail({ service }: { service: Service }) {
               "radial-gradient(circle at 15% 20%, color-mix(in oklch, var(--color-primary) 35%, transparent), transparent 55%)",
           }}
         />
-        <div className="container-page relative animate-rise">
+        <div className="container-page relative animate-rise py-16 sm:py-20">
           <Link
             to="/services"
             className="inline-flex items-center gap-1.5 text-sm text-primary-foreground/75 hover:text-primary-foreground"

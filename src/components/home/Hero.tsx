@@ -1,104 +1,82 @@
-import { useEffect, useState } from "react";
-import { CheckCircle2, Sparkles } from "lucide-react";
-import { CtaButtons } from "@/components/ui/cta-buttons";
-import { Eyebrow } from "@/components/ui/section";
-import { cn } from "@/lib/utils";
-import berlinSkyline from "@/assets/berlin-skyline.jpg";
+import { Link } from "@tanstack/react-router";
+import { ArrowRight, MessageCircle, Plane } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
+import heroImage from "@/assets/travel/hero-wing.webp";
 
-const LANGUAGES = [
-  { flag: "🇩🇪", label: "Allemand · A1 à C1" },
-  { flag: "🇬🇧", label: "Anglais · tous niveaux" },
+const STATS = [
+  { value: "5 ans", label: "d'expérience" },
+  { value: "A1 → C1", label: "allemand certifiant" },
+  { value: "IELTS · TCF", label: "TOEFL · TEF · TOEIC" },
+  { value: "1 : 1", label: "suivi personnalisé du visa" },
 ];
 
-const POINTS = [
-  "Cours d'allemand et d'anglais, en présentiel ou en ligne",
-  "Accompagnement visa étudiant pour votre projet en Allemagne",
-  "Soutien scolaire et préparation aux concours",
-];
-
-const GERMAN_CITIES = [
-  {
-    city: "Berlin",
-    text: "La capitale : universités reconnues, vie étudiante dynamique et un vaste choix de filières.",
-  },
-  {
-    city: "Munich",
-    text: "Pôle technologique et industriel, avec certaines des meilleures universités d'Allemagne.",
-  },
-  {
-    city: "Hambourg",
-    text: "Grand port international tourné vers le commerce, la logistique et les affaires.",
-  },
-  {
-    city: "Francfort",
-    text: "Centre financier européen, idéal pour un projet d'études tourné vers l'économie.",
-  },
-  {
-    city: "Cologne",
-    text: "Ville étudiante à taille humaine, riche vie culturelle et coût de la vie modéré.",
-  },
-  {
-    city: "Stuttgart",
-    text: "Capitale de l'automobile et de l'ingénierie, proche de grandes écoles techniques.",
-  },
-  {
-    city: "Leipzig",
-    text: "Ville universitaire en plein essor, réputée pour son accueil des étudiants étrangers.",
-  },
-  {
-    city: "Dresde",
-    text: "Entre histoire et innovation, avec des universités techniques de premier plan.",
-  },
-] as const;
-
-function CityCarousel() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-    const id = window.setInterval(() => {
-      setIndex((value) => (value + 1) % GERMAN_CITIES.length);
-    }, 3500);
-    return () => window.clearInterval(id);
-  }, []);
-
-  const current = GERMAN_CITIES[index % GERMAN_CITIES.length]!;
-
+function BoardingPass() {
   return (
-    <div
-      className="animate-float mt-6 inline-flex max-w-xs flex-col gap-1 rounded-2xl border border-border bg-secondary/95 p-4 shadow-soft backdrop-blur-sm sm:absolute sm:-right-4 sm:-bottom-6 sm:mt-0 lg:-right-8"
-      style={{ animationDelay: "120ms" }}
-    >
-      <div key={index} className="animate-fade-swap flex min-h-[62px] flex-col gap-1">
-        <p className="text-sm font-semibold text-secondary-foreground">
-          🇩🇪 {current.city}
-        </p>
-        <p className="text-xs text-muted-foreground">{current.text}</p>
+    <div className="relative w-full max-w-sm rotate-2 rounded-[1.75rem] bg-white/95 text-foreground shadow-[0_30px_80px_-20px_oklch(0.1_0.03_158/0.7)] backdrop-blur transition-transform duration-500 hover:rotate-0">
+      <div className="flex items-center justify-between rounded-t-[1.75rem] bg-night px-6 py-4 text-night-foreground">
+        <span className="font-display text-sm font-bold tracking-wide">
+          BOARDING PASS
+        </span>
+        <span className="text-xs text-night-foreground/70">ExpoLearn Air</span>
       </div>
 
-      <div
-        role="tablist"
-        aria-label="Villes d'Allemagne"
-        className="mt-2 flex items-center gap-1.5"
-      >
-        {GERMAN_CITIES.map((item, i) => (
-          <button
-            key={item.city}
-            type="button"
-            role="tab"
-            aria-selected={i === index}
-            aria-label={item.city}
-            onClick={() => setIndex(i)}
-            className={cn(
-              "h-1.5 rounded-full transition-all duration-300",
-              i === index
-                ? "w-4 bg-primary-dark"
-                : "w-1.5 bg-primary-dark/25 hover:bg-primary-dark/50",
-            )}
-          />
-        ))}
+      <div className="px-6 pt-5 pb-4">
+        <div className="flex items-end justify-between">
+          <div>
+            <p className="text-[0.65rem] font-semibold tracking-widest text-muted-foreground uppercase">
+              Départ
+            </p>
+            <p className="font-display text-4xl font-extrabold">NSI</p>
+            <p className="text-xs text-muted-foreground">Yaoundé</p>
+          </div>
+          <div className="mb-5 flex flex-1 items-center gap-1 px-3 text-primary">
+            <span className="h-px flex-1 border-t-2 border-dashed border-primary/40" />
+            <Plane aria-hidden="true" className="size-5" />
+            <span className="h-px flex-1 border-t-2 border-dashed border-primary/40" />
+          </div>
+          <div className="text-right">
+            <p className="text-[0.65rem] font-semibold tracking-widest text-muted-foreground uppercase">
+              Arrivée
+            </p>
+            <p className="font-display text-4xl font-extrabold">?</p>
+            <p className="text-xs text-muted-foreground">Berlin · Toronto</p>
+          </div>
+        </div>
+
+        <dl className="mt-5 grid grid-cols-3 gap-3 border-t border-dashed border-border pt-4 text-xs">
+          <div>
+            <dt className="text-muted-foreground">Passager</dt>
+            <dd className="mt-0.5 font-bold">Toi</dd>
+          </div>
+          <div>
+            <dt className="text-muted-foreground">Classe</dt>
+            <dd className="mt-0.5 font-bold">A1 → C1</dd>
+          </div>
+          <div>
+            <dt className="text-muted-foreground">Embarquement</dt>
+            <dd className="mt-0.5 font-bold text-primary-dark">05 oct. 2026</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div className="relative border-t-2 border-dashed border-border px-6 py-4">
+        <span
+          aria-hidden="true"
+          className="absolute -top-3 -left-3 size-6 rounded-full bg-night/60"
+        />
+        <span
+          aria-hidden="true"
+          className="absolute -top-3 -right-3 size-6 rounded-full bg-night/60"
+        />
+        <div
+          aria-hidden="true"
+          className="h-9 w-full opacity-80"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, var(--color-foreground) 0 2px, transparent 2px 4px, var(--color-foreground) 4px 5px, transparent 5px 9px)",
+          }}
+        />
       </div>
     </div>
   );
@@ -106,85 +84,105 @@ function CityCarousel() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-10 pb-20 text-foreground sm:pt-14 sm:pb-28">
+    <section className="under-header relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-night text-night-foreground">
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        fetchPriority="high"
+        className="animate-ken-burns absolute inset-0 -z-20 h-full w-full object-cover object-[60%_center]"
+      />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(circle at 12% 8%, color-mix(in oklch, var(--color-primary) 14%, transparent), transparent 45%), radial-gradient(circle at 92% 28%, color-mix(in oklch, var(--color-highlight) 16%, transparent), transparent 50%)",
-        }}
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-night via-night/75 to-night/10"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-night via-night/40 to-transparent"
       />
 
-      <div className="container-page relative grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10 xl:gap-16">
-        <div className="max-w-xl animate-rise">
-          <Eyebrow>ExpoLearn Language Academy · Yaoundé, Cameroun</Eyebrow>
-          <h1 className="mt-5 text-4xl leading-[1.08] font-bold text-balance sm:text-5xl lg:text-[3.25rem]">
-            Apprenez l'allemand, et donnez-vous un avenir en Allemagne
-          </h1>
-          <p className="text-balance-p mt-5 max-w-lg text-base text-muted-foreground sm:text-lg">
-            ExpoLearn est un centre de formation en langues à Yaoundé : cours
-            d'allemand et d'anglais du niveau débutant à avancé, et un
-            accompagnement complet jusqu'à votre visa étudiant pour partir
-            étudier en Allemagne.
+      <div className="container-page grid flex-1 items-center gap-12 py-14 lg:grid-cols-[1.25fr_0.75fr] lg:py-20">
+        <div className="max-w-2xl animate-rise">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold tracking-wide backdrop-blur-md sm:text-sm">
+            <span className="relative flex size-2">
+              <span className="animate-pulse-glow absolute inset-0 rounded-full bg-sunset" />
+              <span className="relative size-2 rounded-full bg-sunset" />
+            </span>
+            Inscriptions ouvertes · Rentrée allemand le 05 octobre
           </p>
 
-          <ul className="mt-5 flex flex-wrap gap-2.5">
-            {LANGUAGES.map((language) => (
-              <li
-                key={language.label}
-                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary px-3 py-1.5 text-sm font-medium text-secondary-foreground"
-              >
-                <span aria-hidden="true">{language.flag}</span>
-                {language.label}
-              </li>
-            ))}
-          </ul>
+          <h1 className="mt-6 text-5xl leading-[0.98] font-extrabold sm:text-6xl lg:text-7xl xl:text-[5.5rem]">
+            Ton avenir n'a pas de{" "}
+            <span className="font-serif font-normal text-sunset italic">
+              frontières.
+            </span>
+          </h1>
 
-          <CtaButtons className="mt-8" />
+          <p className="text-balance-p mt-6 max-w-lg text-base text-night-foreground/80 sm:text-lg">
+            Depuis Yaoundé, ExpoLearn te prépare à partir étudier à l'étranger :
+            la langue, le dossier, le visa. Tu n'as plus qu'à boucler ta valise.
+          </p>
 
-          <ul className="mt-9 grid gap-3 border-t border-border pt-6 sm:grid-cols-2">
-            {POINTS.map((point) => (
-              <li
-                key={point}
-                className="flex items-start gap-2.5 text-sm text-muted-foreground"
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <Button
+              asChild
+              size="lg"
+              className="bg-sunset text-night shadow-[0_10px_30px_-8px_var(--color-sunset)] hover:bg-white"
+            >
+              <Link to="/inscription">
+                Je prépare mon départ
+                <ArrowRight aria-hidden="true" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/30 bg-white/5 text-night-foreground backdrop-blur hover:border-white hover:bg-white/15"
+            >
+              <a
+                href={buildWhatsAppLink(
+                  "Bonjour ExpoLearn, j'ai un projet d'études à l'étranger.",
+                )}
+                target="_blank"
+                rel="noreferrer"
               >
-                <CheckCircle2
-                  aria-hidden="true"
-                  className="mt-0.5 size-4 shrink-0 text-primary-dark"
-                />
-                {point}
-              </li>
-            ))}
-          </ul>
+                <MessageCircle aria-hidden="true" />
+                Parler à un conseiller
+              </a>
+            </Button>
+          </div>
         </div>
 
-        <div className="relative animate-rise" style={{ animationDelay: "90ms" }}>
-          <div
-            aria-hidden="true"
-            className="absolute -inset-6 -z-10 rounded-[3rem] bg-primary/10 blur-2xl"
-          />
-          <div className="relative overflow-hidden rounded-[2rem] border border-border shadow-card sm:rounded-[2.5rem]">
-            <img
-              src={berlinSkyline}
-              alt="Skyline de Berlin au coucher du soleil, avec la tour de télévision"
-              width={1600}
-              height={1066}
-              className="aspect-3/2 w-full object-cover"
-            />
+        <div
+          className="hidden animate-rise justify-center lg:flex"
+          style={{ animationDelay: "200ms" }}
+        >
+          <div className="animate-float">
+            <BoardingPass />
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10 bg-night/40 backdrop-blur-md">
+        <dl className="container-page grid grid-cols-2 gap-y-5 py-6 sm:grid-cols-4">
+          {STATS.map((stat) => (
             <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-t from-primary-dark/35 via-transparent to-transparent"
-            />
-          </div>
-
-          <div className="animate-float absolute -top-5 left-4 inline-flex items-center gap-2 rounded-2xl border border-border bg-card px-4 py-2.5 shadow-soft sm:-left-6">
-            <Sparkles aria-hidden="true" className="size-4 text-highlight-foreground" />
-            <span className="text-sm font-semibold">5 ans d'expérience</span>
-          </div>
-
-          <CityCarousel />
-        </div>
+              key={stat.value}
+              className="border-white/10 px-1 sm:border-l sm:px-6 sm:first:border-l-0 sm:first:pl-0"
+            >
+              <dt className="sr-only">{stat.label}</dt>
+              <dd>
+                <span className="block font-display text-xl font-bold sm:text-2xl">
+                  {stat.value}
+                </span>
+                <span className="text-xs text-night-foreground/65 sm:text-sm">
+                  {stat.label}
+                </span>
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );
