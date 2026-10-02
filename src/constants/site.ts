@@ -72,6 +72,7 @@ export const EXAM_TYPES = [
 export const DESTINATION_COUNTRIES = [
   "Allemagne",
   "France",
+  "Belgique",
   "Canada",
   "États-Unis",
   "Royaume-Uni",
