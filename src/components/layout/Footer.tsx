@@ -2,8 +2,6 @@ import { Link } from "@tanstack/react-router";
 import {
   ArrowUpRight,
   Facebook,
-  Instagram,
-  Linkedin,
   Mail,
   MapPin,
   MessageCircle,
@@ -14,11 +12,36 @@ import { NAV_LINKS, SITE } from "@/constants/site";
 import { SERVICES } from "@/constants/services";
 import logo from "@/assets/brand/expolearn-logo.png";
 
-const SOCIALS: { name: string; icon: LucideIcon; href?: string }[] = [
-  { name: "WhatsApp", icon: MessageCircle, href: SITE.whatsappHref },
-  { name: "Facebook", icon: Facebook },
-  { name: "Instagram", icon: Instagram },
-  { name: "LinkedIn", icon: Linkedin },
+const SOCIALS: {
+  name: string;
+  label: string;
+  icon: LucideIcon;
+  href: string;
+}[] = [
+  {
+    name: "WhatsApp",
+    label: "WhatsApp",
+    icon: MessageCircle,
+    href: SITE.whatsappHref,
+  },
+  {
+    name: "Facebook — ExpoLearn",
+    label: "Facebook",
+    icon: Facebook,
+    href: "https://www.facebook.com/share/1FdV3ErV6D/",
+  },
+  {
+    name: "Facebook — ExpoLearn Deutsch",
+    label: "Deutsch",
+    icon: Facebook,
+    href: "https://www.facebook.com/Expolearn.deutsch?sfnsn=wa&mibextid=RUbZ1f",
+  },
+  {
+    name: "Facebook — profil ExpoLearn",
+    label: "Profil",
+    icon: Facebook,
+    href: "https://www.facebook.com/profile.php?id=61595296766675",
+  },
 ];
 
 const CREDITS =
@@ -44,28 +67,22 @@ export function Footer() {
             Langues, visa étudiant, soutien scolaire et concours : on te prépare
             à réussir, à Yaoundé comme à l'étranger.
           </p>
-          <ul className="mt-6 flex gap-2">
-            {SOCIALS.map(({ name, icon: Icon, href }) => (
+          <ul className="mt-6 flex flex-wrap gap-3">
+            {SOCIALS.map(({ name, label, icon: Icon, href }) => (
               <li key={name}>
-                {href ? (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={name}
-                    className="flex size-11 items-center justify-center rounded-full border border-white/15 transition-colors hover:border-sunset hover:bg-sunset hover:text-night"
-                  >
-                    <Icon aria-hidden="true" className="size-4" />
-                  </a>
-                ) : (
-                  <span
-                    title={`${name} — lien à venir`}
-                    aria-label={`${name}, lien à venir`}
-                    className="flex size-11 items-center justify-center rounded-full border border-white/15 text-night-foreground/50"
-                  >
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={name}
+                  title={name}
+                  className="flex min-w-11 flex-col items-center gap-1 text-[10px] text-night-foreground/70 transition-colors hover:text-sunset"
+                >
+                  <span className="flex size-11 items-center justify-center rounded-full border border-white/15 transition-colors hover:border-sunset hover:bg-sunset hover:text-night">
                     <Icon aria-hidden="true" className="size-4" />
                   </span>
-                )}
+                  <span>{label}</span>
+                </a>
               </li>
             ))}
           </ul>
